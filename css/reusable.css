@@ -1,0 +1,50 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+.margin1 {
+    margin: 1rem;
+}
+
+.padding1 {
+    padding: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+}
+
+.ycenter {
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+}
+
+.text-center {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}

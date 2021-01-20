@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Stats */
+
+
+
+.back-arrow {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+}
+
+.bot-one,
+.bot-two,
+.bot-three {
+    flex: 1;
+    height: 100vh;
+}
+
+.bot-one {
+    background-color: lightcoral;
+}
+
+.bot-two {
+    background-color: lightgreen;
+    /* height: 100vh; */
+}
+.bot-three {
+    background-color: lightblue;
+    /* height: 100vh; */
+   
+}
+
+.img-griffin {
+    width: auto;
+    height: 10rem;
+}
+
+.img-pikachu {
+    width: 10rem;
+    height: 10rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding: 1rem;
+}

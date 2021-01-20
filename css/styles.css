@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    overflow: hidden;
+}
+
+html, body {
+    height: 100%;
+    font-family: sans-serif;
+}
+
+main {
+    margin: 4rem 4rem 0rem 4rem;
+    height: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+    color: #8BC8DA;
+}
+
+.btn-stats,
+.btn-start-game {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 2rem;
+}
+
+aside {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+}
+
+.balloon-red {
+    margin-right: 6rem;
+}
