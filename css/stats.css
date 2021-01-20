@@ -3,46 +3,42 @@
     margin: 0;
     padding: 0;
 }
-
 /* Stats */
 
+.back-arrow span {
+    background: var(--black-color);
+    color: #fff;
+    text-align: center;
+    padding: 0.3rem;
+    transition: border-radius 300ms ease;
+}
 
-
-.back-arrow {
-    position: absolute;
-    left: 1rem;
-    top: 1rem;
+.back-arrow span:hover {
+    border-radius: 50%;
 }
 
 .bot-one,
 .bot-two,
 .bot-three {
     flex: 1;
-    height: 100vh;
 }
 
 .bot-one {
-    background-color: lightcoral;
+    background-color: var(--red-color);
 }
-
 .bot-two {
-    background-color: lightgreen;
-    /* height: 100vh; */
+    background-color: var(--yellow-color);
 }
 .bot-three {
-    background-color: lightblue;
-    /* height: 100vh; */
-   
+    background-color: var(--blue-color);
 }
 
-.img-griffin {
-    width: auto;
-    height: 10rem;
-}
-
-.img-pikachu {
-    width: 10rem;
-    height: 10rem;
+.img-bot {
+    margin: 1rem;
+    width: 12rem;
+    height: 12rem;
+    background-color: #fff;
+    border-radius: 50%;
 }
 
 ul {

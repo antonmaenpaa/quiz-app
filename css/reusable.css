@@ -1,9 +1,11 @@
 
-* {
-    box-sizing: border-box;
-    margin: 0;
+/* Reusable classes */
+:root {
+    --red-color: #FEBDC9;
+    --yellow-color: #FFFE8A;
+    --blue-color: #8BC8DA;
+    --black-color: #293036;
 }
-
 
 .margin1 {
     margin: 1rem;
@@ -47,4 +49,12 @@
 
 a {
     text-decoration: none;
+}
+
+.yflex-end {
+    align-items: flex-end;
+}
+
+.flex-1 {
+    flex: 1;
 }
