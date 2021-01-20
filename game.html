@@ -13,32 +13,60 @@
 </head>
 
 <body>
-    <main>
-        <a class="back-arrow" href="index.html"><span class="material-icons">
-                keyboard_backspace
-            </span></a>
+    <main class="page-padding">
+        <div class="flex flex-1">
+            <a class="back-arrow" href="index.html">
+                <span class="material-icons">keyboard_backspace</span>
+            </a>
+        </div>
         <section>
             <div class="flex center">
-                <div class="circle" id="bot1"></div>
-                
+                <div class="circle" id="dealer">Dealer</div>
             </div>
             <div class="flex center space-evenly">
-                <div class="circle" id="bot2"></div>
-                <div class="circle" id="bot3"></div>
+                <div class="flex column center ycenter">
+                    <div class="circle" id="bot2">Bot 2</div>
+                    <div>
 
+                        <img src="./assets/star.png" alt="">
+                        <img src="./assets/star.png" alt="">
+                        <img class="add-black-star" src="./assets/star.png" alt="">
+                    </div>
+                </div>
+                <div class="flex column center ycenter">
+                    <div class="circle" id="bot3">Bot 3</div>
+                    <div>
+                        <img src="./assets/star.png" alt="">
+                        <img src="./assets/star.png" alt="">
+                        <img class="add-black-star" src="./assets/star.png" alt="">
+
+                    </div>
+                </div>
             </div>
             <div class="flex center">
-                <div class="circle" id="user"></div>
-
+                <div class="circle add-border" id="user">User</div>
             </div>
+            <form class="input-container flex space-between center ">
+                <div class="flex">
+                    <p>1- 20</p>
+                </div>
+                <div class="flex center ycenter">
+                    <input id="user-value" type="number" required />
+                    <input class="btn" type="submit" value="Check">
+                </div>
+                <!-- <p class="message">Start guessing...</p> -->
+                <div class="flex">
+                    <!-- <span>star</span>
+                    <span>star</span>
+                    <span>star</span> -->
 
-            <div class="input-container">
-            <!-- <p class="message">Start guessing...</p> -->
-            <input type="number" class="guess" />
-            <button class="btn check">Check</button>
-            </div>
+                    <img src="./assets/star.png" alt="">
+                    <img src="./assets/star.png" alt="">
+                    <img class="add-black-star" src="./assets/star.png" alt="">
+
+                </div>
+            </form>
         </section>
-        
     </main>
 </body>
 
