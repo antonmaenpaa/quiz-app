@@ -21,10 +21,11 @@
 .bot-two,
 .bot-three {
     flex: 1;
+    min-height: 28rem;
 }
 
 .bot-one {
-    background-color: var(--red-color);
+    background-color: var(--green-color);
 }
 .bot-two {
     background-color: var(--yellow-color);

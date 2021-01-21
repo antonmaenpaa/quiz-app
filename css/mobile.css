@@ -1,0 +1,11 @@
+@media (max-width: 40em) {
+
+        /* index */
+
+        /* game */
+
+        /* stats */
+        section {
+            flex-direction: column;
+        }
+}

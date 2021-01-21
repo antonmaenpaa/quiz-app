@@ -27,6 +27,8 @@ main {
 h1 {
     font-size: 4rem;
     color: var(--blue-color);
+    font-family: 'Radley', serif;
+
 }
 
 aside {
@@ -41,15 +43,21 @@ aside {
     padding: 0rem 6rem;
 }
 
+.description {
+    font-size: 0.9rem;
+}
+
 .ballon-container:nth-child(1) {
+    align-self: flex-end;
+}
+
+.ballon-container:nth-child(2) {
     align-self: flex-start;
 }
 
 .ballon-container:nth-child(3) {
-    align-self: flex-start;
+    align-self: flex-end;
 }
-
-
 
 .ballon {
     height: 10rem;
