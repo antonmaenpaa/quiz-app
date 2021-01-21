@@ -1,0 +1,42 @@
+.container {
+    background-color: var(--blue-color);
+    width: 22rem;
+    height: 28rem;
+    margin-top: 4rem;
+    border-radius: 5px;
+}
+
+form h2 {
+    text-align: center;
+    margin: 1.25rem 0;
+    color: var(--black-color);
+    font-size: 2.5rem;
+}
+
+form label {
+    margin: .625rem 0;
+    color: var(--black-color)
+}
+
+form input {
+    margin-bottom: .625rem;
+    border: none;
+    padding: 1rem;
+    border-radius: 2rem;
+    outline: none;
+}
+
+form button a{
+    color: var(--black-color);
+}
+
+a {
+    color: var(--black-color)
+}
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    margin-top: 0.625rem;
+}
