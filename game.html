@@ -21,32 +21,37 @@
             </a>
         </div>
         <section>
+            <!-- Dealer -->
             <div class="flex center">
-                <!-- <div class="circle" id="dealer">Dealer</div> -->
-                <img id="dealer" src="./assets/dealer-pic.png" alt="">
+                <img id="dealer" src="./assets/dealer.svg" alt="Dealer">
             </div>
             <div class="flex center space-evenly">
+                <!-- Bot 1: NAMN -->
                 <div class="flex column center ycenter">
-                    <div class="circle" id="bot2">Bot 2</div>
+                    <img src="./assets/bot2.svg" alt="FakeLilly">
                     <div class="candy-container">
-                        <img src="./assets/candy.png" alt="">
-                        <img src="./assets/candy.png" alt="">
-                        <img class="add-black-candy" src="./assets/candy.png" alt="">
+                        <img src="./assets/candy-score-empty.svg" alt="score">
+                        <img src="./assets/candy-score-empty.svg" alt="score">
+                        <img src="./assets/candy-score-empty.svg" alt="score">
                     </div>
                 </div>
+                <!-- Bot 2: Lilly -->
                 <div class="flex column center ycenter">
-                    <div class="circle" id="bot3">Bot 3</div>
+                    <img src="./assets/bot2.svg" alt="Lilly">
                     <div class="candy-container">
-                        <img src="./assets/candy.png" alt="">
-                        <img src="./assets/candy.png" alt="">
-                        <img class="add-black-candy" src="./assets/candy.png" alt="">
+                        <img src="./assets/candy-score.svg" alt="score">
+                        <img src="./assets/candy-score.svg" alt="score">
+                        <img src="./assets/candy-score-empty.svg" alt="score">
                     </div>
                 </div>
             </div>
+            <!-- User -->
             <div class="flex center">
-                <div class="circle add-border" id="user">User</div>
+                <img src="./assets/bot2.svg" alt="User">
             </div>
-            <form class="input-container flex space-between center ">
+            <!-- User block -->
+            <div class="user-input-block flex space-between center ">
+                <!-- Illustration of possible numbers -->
                 <div class="flex center ycenter">
                     <p class="margin1">1</p>
                     <div class="small-rect"></div>
@@ -71,20 +76,19 @@
                     <div class="small-rect"></div>
                     <p class="margin1">20</p>
                 </div>
-                <div class="flex center ycenter">
+                <!-- Input field -->
+                <form class="flex center ycenter">
                     <input id="user-value" type="number" required />
                     <input class="btn" type="submit" value="Check">
-                </div>
-                <p class="message" id="dealer-msg"></p>
+                </form>
+                <p class="message" id="dealer-msg">Välkommen</p> <!-- Flytta till ovanför dealern -->
+                <!-- User score -->
                 <div class="flex candy-container">
-                    <!-- <span>candy</span>
-                    <span>candy</span>
-                    <span>candy</span> -->
-                    <img src="./assets/candy.png" alt="">
-                    <img src="./assets/candy.png" alt="">
-                    <img class="add-black-candy" src="./assets/candy.png" alt="">
+                    <img src="./assets/candy-score.svg" alt="score">
+                    <img src="./assets/candy-score-empty.svg" alt="score">
+                    <img src="./assets/candy-score-empty.svg" alt="score">
                 </div>
-            </form>
+            </div>
         </section>
     </main>
 </body>
