@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login</title>
@@ -6,7 +9,11 @@
 <link rel="stylesheet" href="./css/reusable.css">
 <link rel="stylesheet" href="./css/game.css">
 <link rel="stylesheet" href="./css/login.css">
-<script src="./app.js"></script>
+<script src="./javascript/app.js"></script>
+<script src="./javascript/game.js"></script>
+<script src="./javascript/register.js"></script>
+<script src="./javascript/login.js"></script>
+<script src="./javascript/modal.js"></script>
 </head>
 <body class="body page-padding">
 <header class="header flex center">
@@ -14,17 +21,19 @@
 </header>
 <main class="main flex center">
     <div class="container flex column center ycenter">
-        <form action="" class="flex column center">
+        <form action="" class="flex column center" id="registerForm">
             <h2>Sign Up</h2>
             <label for="username">Username</label>
-            <input type="text" name="username" id="username">
+            <input type="text" name="username" id="regUsername">
 
             <label for="password">Password</label>
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="regPassword">
             <label for="password2">Repeat Password</label>
-            <input type="password" name="password2" id="password2">
+            <input type="password" name="password2" id="regPassword2">
 
-            <button class="btn"><a href="index.html">Create User</a></button>
+            <input type="button" id="registrationBtn" value="Register">
+
+            <!-- <button class="btn"><a href="index.html">Create User</a></button> -->
         </form>
     </div>
 </main>

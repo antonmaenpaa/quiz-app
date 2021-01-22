@@ -9,7 +9,11 @@
     <link rel="stylesheet" href="./css/reusable.css">
     <link rel="stylesheet" href="./css/game.css">
     <link rel="stylesheet" href="./css/login.css">
-    <script src="./app.js"></script>
+    <script src="./javascript/app.js"></script>
+    <script src="./javascript/game.js"></script>
+    <script src="./javascript/modal.js"></script>
+    <script src="./javascript/register.js"></script>
+    <script src="./javascript/login.js"></script>
 </head>
 <body class="body page-padding">
     <header class="header flex center">
@@ -17,7 +21,7 @@
     </header>
     <main class="main flex center">
         <div class="container flex column center ycenter">
-            <form action="" class="flex column center">
+            <form id="userDetailsForm" action="" class="flex column center">
                 <h2>Log In</h2>
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username">
@@ -25,7 +29,8 @@
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password">
 
-                <button class="btn"><a href="index.html">Log In</a></button>
+                <input type="button" id="submitBtn" value="submit">
+                <!-- <button class="btn"><a href="index.html" id="loginBtn">Log In</a></button> -->
             </form>
             <div class="register">
                 <p>Not a member? Sign Up <a href="register.html">Here</a></p>
