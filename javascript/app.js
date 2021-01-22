@@ -1,8 +1,8 @@
 window.addEventListener('load', main);
 
 function main() {
+    registerEventListeners();
     loginEventListeners();
+    // gameEventListeners();
 }
 
-let guessedNumber = Math.trunc(Math.random.random()*20) + 1 ;
-let score = 20;
