@@ -40,3 +40,7 @@ a:hover {
 p {
     margin-top: 0.625rem;
 }
+
+.add-border-input {
+    border: 0.2rem solid red;
+}
