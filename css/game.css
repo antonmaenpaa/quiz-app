@@ -1,25 +1,8 @@
 /* GAME */
 
-.circle {
-    width: 7rem;
-    height: 7rem;
-    border-radius: 30rem;
-    background-color: #ddd;
-    margin: 0.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .add-border {
     border: 5px solid #FFF;
     box-shadow: 0 0 0 2px green;    
-}
-
-.add-black-candy {
-    filter: grayscale(80%);
-    width: 2rem;
-    height: 2rem;
 }
 
 .candy-container img {
@@ -57,7 +40,7 @@
     width: 12rem;
 }
 
-.input-container {
+.user-input-block {
     margin-top: 1rem;
     padding: 1rem;
     background-color: var(--blue-color);
@@ -79,18 +62,6 @@
 #dealer {
     width: 10rem;
     height: 10rem;
-}
-
-#bot2 {
-    background-color: var(--red-color);
-}
-
-#bot3 {
-    background-color: var(--yellow-color);
-}
-
-#user{
-    background-color: var(--blue-color);
 }
 
 .small-rect {
