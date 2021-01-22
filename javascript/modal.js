@@ -18,14 +18,13 @@ function displayModal(button) {
     const botDescription = document.querySelector("#bot-info");
 
     if (button.innerText === "PIKACHU") {
-        botDescription.innerText = 
-        "Pokémon Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae odio inventore asperiores iste placeat fugit ipsam iusto vero laudantium quisquam.";
+        botDescription.innerText = "Pokémon Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae odio inventore asperiores iste placeat fugit ipsam iusto vero laudantium quisquam.";
     } 
     if (button.innerText === "PETER") {
-        botDescription.innerText = "Family guy";
+        botDescription.innerText = "Family guy Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae odio inventore asperiores iste placeat fugit ipsam iusto vero laudantium quisquam.";
     } 
     if (button.innerText === "PINGU") {
-        botDescription.innerText = "Pingus värld";
+        botDescription.innerText = "Pingus värld Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae odio inventore asperiores iste placeat fugit ipsam iusto vero laudantium quisquam.";
     } 
 
 }

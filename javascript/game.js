@@ -7,7 +7,7 @@ const showMessage = function (message) {
 }
 
 // The USER's guessing function
-document.querySelector('.btn').addEventListener('click', function() => {
+document.querySelector('.btn').addEventListener('click', function() {
     const guess = Number(document.getElementById("user-value").value);
 
     if(!guess === dealtCard) 
