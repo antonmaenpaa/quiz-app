@@ -11,42 +11,81 @@
     <link rel="stylesheet" href="./css/game.css">
     <link rel="stylesheet" href="./css/reusable.css">
     <link rel="stylesheet" href="./css/mobile.css">
-    <script defer src="./javascript/modal.js"></script>
+    <!-- <script defer src="./javascript/modal.js"></script> -->
     <title>Stats</title>
 </head>
 
 <body>
-    <main class="page-padding">
-        <div class="flex flex-1">
-            <a class="back-arrow" href="index.html"><span class="material-icons">
-                keyboard_backspace
+    <main class="flex">
+        <!-- Back button -->
+        <div class="back-button">
+            <a class="back-arrow" href="index.html">
+                <span class="material-icons">keyboard_backspace</span>
             </a>
         </div>
-        <section id="bot-container" class="flex center">
-            <!-- User -->
-            <div id="bot-box" class="bot-one flex column center ycenter">
-                <img class="img-bot" src="./assets/player-win.svg" alt="Lilly"/>
-                <button class="btn" id="bot1">Username</button>
+        <!-- User -->
+        <div class="green-bg flex flex-1 center column">
+            <div class="profile-image-container">
+                <img class="profile-image" src="./assets/player-win.svg" alt="User"/>
             </div>
-            <!-- Bot 1 Frank / Muffin -->
-            <div id="bot-box" class="bot-two flex column center ycenter">
-                <img class="img-bot" src="./assets/bot1-win.svg" alt="Lilly"/>
-                <button class="btn" id="bot2"><a href="#">Lilly</a></button>
+            <div class="profile-info flex center column">
+                <h2>User</h2>
+                <div class="personality">
+                    <ul>
+                        <li>Center of the party</li>
+                        <li>Center of the party</li>
+                        <li>Center of the party</li>
+                    </ul>
+                </div>
             </div>
-            <!-- Bot 2 Lilly / Gift -->
-            <div id="bot-box" class="bot-three flex column center ycenter">
-                <img class="img-bot" src="./assets/bot2-win.svg" alt="Lilly"/>
-                <button class="btn" id="bot2"><a href="#">FakeLilly</a></button>
+            <div class="green-info-divider flex flex-1"></div>
+            <div class="stats-container flex center column">
+                <div class="user-circle-diagram"></div>
+                <h3>xx % wins</h3> <!-- Add text with js -->
             </div>
-        </section>
-    </main>
-    <!-- Pop-up modal -->
-    <div class="modal-active">
-        <span class="material-icons close">close</span>
-        <div class="modal-content">
-            <h2 id="bot-title"></h2>
-            <p id="bot-info"></p>
         </div>
-    </div>
+        <!-- Bot 1 Frank / Muffin -->
+        <div class="yellow-bg flex flex-1 center column">
+            <div class="profile-image-container">
+                <img class="profile-image" src="./assets/bot1-win.svg" alt="Frank"/>
+            </div>
+            <div class="profile-info flex center column">
+                <h2>Frank</h2>
+                <div class="personality">
+                    <ul>
+                        <li>Smooth</li>
+                        <li>Smooth</li>
+                        <li>Smooth</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="yellow-info-divider flex flex-1"></div>
+            <div class="stats-container flex center column">
+                <div class="bot1-circle-diagram"></div>
+                <h3>xx % wins</h3> <!-- Add text with js -->
+            </div>
+        </div>
+        <!-- Bot 2 Lilly / Gift -->
+        <div class="blue-bg flex flex-1 center column">
+            <div class="profile-image-container">
+                <img class="profile-image" src="./assets/bot2-win.svg" alt="Lilly"/>
+            </div>
+            <div class="profile-info flex center column">
+                <h2>Lilly</h2>
+                <div class="personality">
+                    <ul>
+                        <li>A real surprise</li>
+                        <li>A real surprise</li>
+                        <li>A real surprise</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="blue-info-divider flex flex-1"></div>
+            <div class="stats-container flex center column">
+                <div class="bot2-circle-diagram"></div>
+                <h3>xx % wins</h3> <!-- Add text with js -->
+            </div>
+        </div>
+    </main>
 </body>
 </html>

@@ -1,26 +1,35 @@
 
 /* Reusable classes */
 :root {
-    --red-color: #FEBDC9;
+    --pink-color: #FEBDC9;
     --yellow-color: #FFFE8A;
     --blue-color: #8BC8DA;
     --green-color: #B4F3BB;
+
+    --dark-pink-color: #FEACC9;
+    --dark-yellow-color: #F8F65E;
+    --dark-blue-color: #77B9DA;
+    --dark-green-color: #9CD4A4;
+
     --black-color: #293036;
 }
 
-.margin1 {
-    margin: 1rem;
-}
-
-.padding1 {
-    padding: 1rem;
-}
+/* Flex */
 
 .flex {
     display: flex;
 }
 
+.flex-1 {
+    flex: 1;
+}
+
 .center {
+    justify-content: center;
+    align-items: center;
+}
+
+.xcenter {
     justify-content: center;
 }
 
@@ -44,6 +53,23 @@
     justify-content: space-evenly;
 }
 
+.yflex-end {
+    align-items: flex-end;
+}
+
+
+/* List */
+ul {
+    list-style-type: disc;
+}
+
+li {
+    margin: .5rem;
+    font-size: 1.5rem;
+}
+
+
+/* Text */
 .text-center {
     text-align: center;
 }
@@ -52,10 +78,28 @@ a {
     text-decoration: none;
 }
 
-.yflex-end {
-    align-items: flex-end;
+h2 {
+    font-size: 2.5rem;
 }
 
-.flex-1 {
-    flex: 1;
+h3 {
+    font-size: 1.5rem;
+}
+
+
+/* Whitespace */
+.margin1 {
+    margin: 1rem;
+}
+
+.padding1 {
+    padding: 1rem;
+}
+
+
+/* Other */
+.back-button {
+    position: absolute;
+    margin-top: 2rem;
+    margin-left: 2rem;
 }
