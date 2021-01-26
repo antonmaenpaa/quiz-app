@@ -24,6 +24,10 @@
     flex: 1;
 }
 
+.flex-2 {
+    flex: 2;
+}
+
 .center {
     justify-content: center;
     align-items: center;
@@ -76,6 +80,12 @@ li {
 
 a {
     text-decoration: none;
+    color: var(--black-color);
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: 'Radley', serif;
 }
 
 h2 {
