@@ -9,12 +9,13 @@
     background-color: white;
     height: 100%;
     min-width: 30rem;
+    padding-top: 2rem;
 }
 
 /* Logo */
 .logo {
     width: 80%;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 /* Form */
@@ -75,24 +76,3 @@ form input:last-child:hover {
 .register a:hover {
     color: var(--dark-blue-color);
 }
-
-/* Knappen var utkommenterad i HTML, kan det tas bort? // Jen
-form button a{
-    color: var(--blue-color);
-}
-
-a {
-    color: var(--black-color)
-}
-a:hover {
-    text-decoration: underline;
-}
-
-p {
-    margin-top: 0.625rem;
-}
-
-.add-border-input {
-    border: 0.2rem solid red;
-}
-*/

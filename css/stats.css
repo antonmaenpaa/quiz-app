@@ -1,18 +1,5 @@
 /* STATS */
 
-/* Go back button */
-.back-arrow span{
-    background: var(--black-color);
-    color: #fff;
-    text-align: center;
-    padding: 0.3rem;
-    border-radius: 0.5rem;
-    transition: border-radius 300ms ease;
-}
-
-.back-arrow span:hover {
-    border-radius: 50%;
-}
 
 /* Backgrounds */
 .green-bg {
