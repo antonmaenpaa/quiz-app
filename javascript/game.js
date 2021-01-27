@@ -187,15 +187,21 @@ function getUserInput() {
     const botTwoPTag = document.getElementById('bot-two-turn')
     botOnePTag.innerText = '';
     botTwoPTag.innerText = '';
+
+    const usernameInput = JSON.parse(localStorage.getItem("user"));
+    const playerName = usernameInput.username;
+    const userTurn = document.getElementById("user-turn");
+    console.log(userTurn);
+    userTurn.innerText = `${playerName}s turn`;
     
     const userForm = document.getElementById('form');
     userForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        fetchUserInput();
+        fetchUserInput(playerName);
     })
 }
 
-function fetchUserInput() {
+function fetchUserInput(playerName) {
     const userInput = document.getElementById('user-input');
     const userGuess = Number(userInput.value);
     if (userGuess > 20 || userGuess < 1) {
@@ -203,18 +209,18 @@ function fetchUserInput() {
     }
 
     // console.log(userGuess);
-    checkGuess(userGuess);
+    checkGuess(playerName, userGuess);
 }
 
-function checkGuess(userGuess) {
-    const usernameInput = JSON.parse(localStorage.getItem("user"));
-    const playerName = usernameInput.username;
+function checkGuess(playerName, userGuess) {
     const dealerSpeak = document.getElementById('higher-lower');
     // const guessesMessage = document.getElementById('number-of-guesses');
 
     if(dealtCard === userGuess) {
         // numberOfGuesses++;
         console.log('You win!', userGuess)
+        const userTurn = document.getElementById("user-turn");
+        userTurn.innerText = "";
         dealerSpeak.innerText = `${playerName} Wins!`
         let candyUser = document.getElementById('user-img');
         candyUser.classList.remove('hide');
