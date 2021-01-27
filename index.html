@@ -9,48 +9,52 @@
     <link rel="stylesheet" href="./css/reusable.css">
     <link rel="stylesheet" href="./css/game.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Radley&display=swap" rel="stylesheet">
     <script src="./javascript/app.js"></script>
     <script src="./javascript/game.js"></script>
     <script src="./javascript/login.js"></script>
     <script src="./javascript/register.js"></script>
 </head>
-<body class="index-container">
-    <main class="flex column center page-margin">
-        <div class="flex center">
-            <h1 class="text-center">Guess My Number</h1>
-        </div>
-        <div class="flex column ycenter margin1">
-            <h3 class="">How To Play</h3>
-            <p class="description text-center margin1">
-                The player starts guessing on a card between 1 and 20, drawn by the dealer.
-                If you guess on a card that is higher than what was drawn, 
-                the dealer will ask you to guess on a lower card.<br><br> 
-                If you guess on a lower card than that was drawn 
-                he will ask to guess lower. If none of the participants 
-                guesses right, the round will start over. 
-                Whoever wins the round will get a golden star. 
-                If you collect 3 golden stars you win.
-            </p>
-        </div>
-        <div class="flex column ycenter center">
-            <a href="game.html">
-                <button class="btn">Start Game</button>
-            </a>
-            <a href="stats.html">
-                <button class="btn">Statistics</button>
-            </a>
+<body class="flex">
+    <main class="flex flex-1">
+        <div class="main-menu-container flex ycenter column">
+            <!-- Logo -->
+            <img class="logo" src="./assets/logo.png" alt="Logo">
+            <!-- Menu buttons -->
+            <div class="menu-buttons-container flex ycenter column">
+                <a class="menu-button primary-button" href="./game.html"> 
+                    Start Game</a>
+                <a class="menu-button secondary-button" href="./stats.html">
+                    Statistics</a>
+                <a class="menu-button sign-out-button" href="./login.html">
+                    Sign out</a>
+            </div>
+            <div class="black-info-divider"></div>
+            <!-- How to play info -->
+            <div class="how-to-play-icon flex center">
+                <span class="material-icons">info</span>
+            </div>
         </div>
     </main>
-    <aside class="aside-mainmenu flex column ycenter center">
-        <div class="ballon-container flex center">
-            <img class="ballon" src="./assets/ballon-yellow.png" alt="">
-        </div>
-        <div class="ballon-container flex center">
-            <img class="ballon" src="./assets/ballon-red.png" alt="">
-        </div>
-        <div class="ballon-container flex center">
-            <img class="ballon" src="./assets/ballon-yellow.png" alt="">
+    <aside class="flex flex-1 main-menu-bg">
+        <!-- Top list -->
+        <div class="balloon-container flex column xcenter">
+            <!-- First place -->
+            <div class="first-place">
+                <img src="./assets/pink-balloon.svg" alt="First place">
+                <img class="first-place-image" src="./assets/player-win.svg" alt="First place">
+            </div>
+            <!-- Second place -->
+            <div class="second-place">
+                <img src="./assets/yellow-balloon.svg" alt="Second place">
+                <img class="second-place-image" src="./assets/bot1-win.svg" alt="Second place">
+            </div>
+            <!-- Third place -->
+            <div class="third-place">
+                <img src="./assets/green-balloon.svg" alt="Third place">
+                <img class="third-place-image" src="./assets/bot2-win.svg" alt="Third place">
+            </div>
         </div>
     </aside>
 </body>

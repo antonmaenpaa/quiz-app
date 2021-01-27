@@ -12,12 +12,6 @@
     padding-top: 2rem;
 }
 
-/* Logo */
-.logo {
-    width: 80%;
-    margin-top: 2.5rem;
-}
-
 /* Form */
 .form-container {
     width: 60%;
@@ -57,12 +51,6 @@ form input:last-child:hover {
 }
 
 /* Sign up */
-.black-info-divider {
-    margin: 2rem 0;
-    width: 30%;
-    border-top: .2rem solid var(--black-color);
-}
-
 .register {
     font-size: 1.2rem;
     margin-bottom: 3rem;
