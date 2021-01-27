@@ -83,3 +83,22 @@
 .add-white-bg {
     background-color: white;
 }
+
+#bot-one-turn,
+#bot-two-turn {
+    font-size: 2rem;
+}
+
+
+.hide {
+    visibility: hidden;
+}
+
+#bot-one-img,
+#bot-two-img {
+    width: 10rem;
+}
+
+.border-input {
+    border: 0.5rem solid red;
+}
