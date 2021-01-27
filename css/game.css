@@ -85,7 +85,9 @@
 }
 
 #bot-one-turn,
-#bot-two-turn {
+#bot-two-turn,
+#higher-lower,
+#count-down {
     font-size: 2rem;
 }
 
