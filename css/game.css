@@ -87,6 +87,7 @@
 #bot-one-turn,
 #bot-two-turn,
 #higher-lower,
+#user-turn,
 #count-down {
     font-size: 2rem;
 }
@@ -103,5 +104,6 @@
 }
 
 .border-input {
-    border: 0.5rem solid red;
+    border: 0.5rem solid var(--pink-color);
+    outline: none;
 }
