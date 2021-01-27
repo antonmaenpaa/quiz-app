@@ -1,46 +1,78 @@
-.container {
-    background-color: var(--blue-color);
-    width: 22rem;
-    height: 28rem;
-    margin-top: 4rem;
-    border-radius: 5px;
+.login-bg {
+    background-image: url("/assets/login-bg.jpg");
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.login-container {
+    background-color: white;
+    width: 100%;
+    min-width: 20rem;
+    padding-top: 2rem;
+}
+
+/* Logo */
+.logo {
+    width: 80%;
+    margin-top: 2.5rem;
+}
+
+/* Form */
+.form-container {
+    width: 60%;
 }
 
 form h2 {
+    margin: 3rem 0 1rem 0;
     text-align: center;
-    margin: 1.25rem 0;
-    color: var(--black-color);
-    font-size: 2.5rem;
 }
 
 form label {
-    margin: .625rem 0;
-    color: var(--black-color)
+    font-weight: bold;
+    margin: .6rem 0 .6rem .3rem;
 }
 
 form input {
-    margin-bottom: .625rem;
+    background-color: rgb(218, 216, 216);
+    margin-bottom: .6rem;
     border: none;
-    padding: 1rem;
-    border-radius: 2rem;
+    padding: .8rem;
+    border-radius: .3rem;
     outline: none;
 }
 
-form button a{
-    color: var(--black-color);
+/* Sign in button */
+form input:last-child {
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 2rem;
+    background-color: var(--dark-blue-color);
+    transition: ease .5s;
 }
 
-a {
-    color: var(--black-color)
-}
-a:hover {
-    text-decoration: underline;
+form input:last-child:hover {
+    cursor: pointer;
+    background-color: var(--blue-color);
 }
 
-p {
-    margin-top: 0.625rem;
+/* Sign up */
+.black-info-divider {
+    margin: 2rem 0;
+    width: 30%;
+    border-top: .2rem solid var(--black-color);
 }
 
-.add-border-input {
-    border: 0.2rem solid red;
+.register {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.register a {
+    font-weight: bold;
+    transition: ease .4s;
+}
+
+.register a:hover {
+    color: var(--dark-blue-color);
 }

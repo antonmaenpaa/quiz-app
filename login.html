@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/stats.css">
     <link rel="stylesheet" href="./css/reusable.css">
@@ -12,27 +13,28 @@
     <script src="./javascript/app.js"></script>
     <script src="./javascript/login.js"></script>
 </head>
-<body class="body page-padding">
-    <header class="header flex center">
-        <h1>Guess My Number</h1>
-    </header>
-    <main class="main flex center">
-        <div class="container flex column center ycenter">
-            <form id="userDetailsForm" action="" class="flex column center">
-                <h2>Log In</h2>
+
+<body class="flex">
+    <main class="flex flex-1 column">
+        <div class="login-container flex center column">
+            <img class="logo" src="./assets/logo.png" alt="Logo">
+            <form id="userDetailsForm" action="" class="form-container flex column">
+                <h2>Sign in</h2>
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username">
 
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password">
 
-                <input type="button" id="submitBtn" value="submit">
-                <!-- <button class="btn"><a href="index.html" id="loginBtn">Log In</a></button> -->
+                <input type="button" id="submitBtn" value="Sign in">
             </form>
-            <div class="register">
-                <p>Not a member? Sign Up <a href="register.html">Here</a></p>
+            <div class="black-info-divider"></div>
+            <div class="register flex center">
+                <p>Not a member? <a href="register.html">Sign up</a></p>
             </div>
         </div>
     </main>
+    <aside class="login-bg flex flex-2">
+    </aside>
 </body>
 </html>

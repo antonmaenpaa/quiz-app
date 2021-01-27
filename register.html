@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login</title>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./css/stats.css">
-<link rel="stylesheet" href="./css/styles.css">
-<link rel="stylesheet" href="./css/reusable.css">
-<link rel="stylesheet" href="./css/game.css">
-<link rel="stylesheet" href="./css/login.css">
-<script src="./javascript/app.js"></script>
-<script src="./javascript/register.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/reusable.css">
+    <link rel="stylesheet" href="./css/game.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="./javascript/app.js"></script>
+    <script src="./javascript/register.js"></script>
 </head>
-<body class="body page-padding">
-    <a class="back-arrow" href="login.html"><span class="material-icons">
-        keyboard_backspace
-    </a>
-<!-- <header class="header flex center">
-    <h1>Guess My Number</h1>
-</header> -->
-<main class="main flex center">
-    <div class="container flex column center ycenter">
-        <form action="" class="flex column center" id="registerForm">
-            <h2>Sign Up</h2>
-            <label for="username">Username</label>
-            <input type="text" name="username" id="regUsername">
 
-            <label for="password">Password</label>
-            <input type="password" name="password" id="regPassword">
-            <label for="password2">Repeat Password</label>
-            <input type="password" name="password2" id="regPassword2">
+<body class="flex">
+    <main class="flex flex-1 column">
+        <!-- Back button -->
+        <a class="back-arrow" href="login.html">
+            <span class="material-icons">keyboard_backspace</span>
+        </a>
+        <div class="login-container flex center column">
+            <img class="logo" src="./assets/logo.png" alt="Logo">
+            <form id="registerForm" action="" class="form-container flex column">
+                <h2>Sign up</h2>
+                <label for="username">Username</label>
+                <input type="text" name="username" id="regUsername">
 
-            <input type="button" id="registrationBtn" value="Register">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="regPassword">
+                
+                <label for="password2">Repeat Password</label>
+                <input type="password" name="password2" id="regPassword2">
 
-            <!-- <button class="btn"><a href="index.html">Create User</a></button> -->
-        </form>
-    </div>
-</main>
+                <input type="button" id="registrationBtn" value="Register">
+            </form>
+        </div>
+    </main>
+    <aside class="login-bg flex flex-2">
+    </aside>
 </body>
 </html>
