@@ -21,8 +21,6 @@ let whosTurn = ['user', 'botOne', 'botTwo'];
 // let countDown = [5, 4, 3, 2, 1];
 
 function counter() {
-    
-    
     let countDown = 10;
     let interval = setInterval(() => {
         let timer = document.getElementById('count-down');
@@ -48,9 +46,7 @@ function counter() {
 
 function gamePlay() {
     generateRandomTurn();
-
 }
-
 
 // function that pick a random bot or the user
 function generateRandomTurn(){
@@ -131,7 +127,6 @@ function getBotOneInput() {
     // console.log('botEEIIIT')
 }
 
-
 // logic for bot two, compare with dealer random number
 function getBotTwoInput() {
     // counter();
@@ -203,18 +198,22 @@ function getUserInput() {
 function fetchUserInput() {
     const userInput = document.getElementById('user-input');
     const userGuess = Number(userInput.value);
+
+
     // console.log(userGuess);
     checkGuess(userGuess);
 }
 
 function checkGuess(userGuess) {
+    const usernameInput = JSON.parse(localStorage.getItem("user"));
+    const playerName = usernameInput.username;
     const dealerSpeak = document.getElementById('higher-lower');
     // const guessesMessage = document.getElementById('number-of-guesses');
 
     if(dealtCard === userGuess) {
         // numberOfGuesses++;
         console.log('You win!', userGuess)
-        dealerSpeak.innerText = 'User Wins!'
+        dealerSpeak.innerText = `${playerName} Wins!`
         let candyUser = document.getElementById('user-img');
         candyUser.classList.remove('hide');
         // guessesMessage.innerText = `Number of guesses: ${numberOfGuesses}`;
@@ -239,8 +238,6 @@ function checkGuess(userGuess) {
         // guessesMessage.innerText = `Number of guesses: ${numberOfGuesses}`;
     }
 }
-
-
 
 // Bot-1's guessing function   
 
