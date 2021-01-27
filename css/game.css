@@ -85,7 +85,9 @@
 }
 
 #bot-one-turn,
-#bot-two-turn {
+#bot-two-turn,
+#higher-lower,
+#count-down {
     font-size: 2rem;
 }
 
@@ -95,7 +97,8 @@
 }
 
 #bot-one-img,
-#bot-two-img {
+#bot-two-img,
+#player-img {
     width: 10rem;
 }
 
