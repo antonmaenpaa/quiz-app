@@ -198,7 +198,9 @@ function getUserInput() {
 function fetchUserInput() {
     const userInput = document.getElementById('user-input');
     const userGuess = Number(userInput.value);
-
+    if (userGuess > 20 || userGuess < 1) {
+        alert("Guess is invalid");
+    }
 
     // console.log(userGuess);
     checkGuess(userGuess);
