@@ -82,6 +82,7 @@ function getBotOneInput() {
     // counter();
 
     const dealerSpeak = document.getElementById('higher-lower');
+    const userTurn = document.getElementById("user-turn");
 
     const botTwoPTag = document.getElementById('bot-two-turn')
     const botOnePTag = document.getElementById('bot-one-turn')
@@ -99,7 +100,7 @@ function getBotOneInput() {
         const candy = document.getElementById('bot-one-img');
         candy.classList.remove('hide');
         
-
+        userTurn.innerText = "";
         botTwoPTag.innerText = ""
 
     } else if(dealtCard > randomNumberbotOne) {
@@ -108,7 +109,7 @@ function getBotOneInput() {
         setTimeout(() => {
             botOnePTag.innerText = 'my guess is: ' + randomNumberbotOne;
         }, Math.floor(Math.random() * 8000) + 3);
-        
+        userTurn.innerText = "";
         botTwoPTag.innerText = "";
         dealerSpeak.innerHTML = 'Higher';
         console.log('higher')
@@ -119,7 +120,7 @@ function getBotOneInput() {
         setTimeout(() => {
             botOnePTag.innerText = 'my guess is: ' + randomNumberbotOne;
         }, Math.floor(Math.random() * 8000) + 3);
-        
+        userTurn.innerText = "";
         botTwoPTag.innerText = ""
         dealerSpeak.innerHTML = 'Lower';
         console.log('lower')
@@ -131,6 +132,7 @@ function getBotOneInput() {
 function getBotTwoInput() {
     // counter();
     const dealerSpeak = document.getElementById('higher-lower');
+    const userTurn = document.getElementById("user-turn");
 
     const botOnePTag = document.getElementById('bot-one-turn')
     const botTwoPTag = document.getElementById('bot-two-turn')
@@ -147,8 +149,8 @@ function getBotTwoInput() {
         const candyBotTwo = document.getElementById('bot-two-img');
         candyBotTwo.classList.remove('hide');
         dealerSpeak.innerText = 'Lilly Wins!'
-
-        botOnePTag.innerText = ""
+        userTurn.innerText = "";
+        botOnePTag.innerText = "";
         console.log('you Win')
 
     } else if(dealtCard > randomNumberbotTwo) {
@@ -157,8 +159,8 @@ function getBotTwoInput() {
         setTimeout(() => {
             botTwoPTag.innerText = 'my guess is: ' + randomNumberbotTwo;
         }, Math.floor(Math.random() * 8000) + 3);
-        
-        botOnePTag.innerText = ""
+        userTurn.innerText = "";
+        botOnePTag.innerText = "";
         dealerSpeak.innerHTML = 'Higher';
         console.log('higher')
 
@@ -168,8 +170,8 @@ function getBotTwoInput() {
         setTimeout(() => {
             botTwoPTag.innerText = 'my guess is: ' + randomNumberbotTwo;
         }, Math.floor(Math.random() * 8000) + 3);
-        
-        botOnePTag.innerText = ""
+        userTurn.innerText = "";
+        botOnePTag.innerText = "";
         dealerSpeak.innerHTML = 'Lower';
         console.log('lower')
     }
@@ -229,7 +231,7 @@ function checkGuess(playerName, userGuess) {
     else if(dealtCard < userGuess) {
         // numberOfGuesses++;
         console.log('dealer-card', dealtCard);
-        dealerSpeak.innerText = 'Lower!'
+        dealerSpeak.innerText = 'Lower!';
         console.log('Lower');
         // setTimeout(generateRandomTurn, 3000);
    
@@ -238,7 +240,7 @@ function checkGuess(playerName, userGuess) {
     else if(dealtCard > userGuess) {
         // numberOfGuesses++;
         console.log('dealer-card', dealtCard);
-        dealerSpeak.innerText = 'Higher!'
+        dealerSpeak.innerText = 'Higher!';
         console.log('Higher');
         // setTimeout(generateRandomTurn, 3000);
 
