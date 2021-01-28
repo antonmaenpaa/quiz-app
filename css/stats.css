@@ -1,27 +1,39 @@
 /* STATS */
 
 
-/* Backgrounds */
-.green-bg {
-    background-color: var(--green-color);
+/* Background */
+.stats-bg {
+    background-image: url(/assets/mainmenu-bg.jpg);
+    background-size: cover;
 }
 
-.yellow-bg {
-    background-color: var(--yellow-color);
-}
-.blue-bg {
-    background-color: var(--blue-color);
+.profile-container {
+    background-color: white;
+    margin: 5rem 1.5rem 0 1.5rem;
+    border-radius: .5rem;
 }
 
 /* Profile image */
-.profile-image-container {
-    padding-top: 5rem;
-}
-
 .profile-image {
     width: 13rem;
     background-color: #fff;
     border-radius: 50%;
+    margin-top: 2rem;
+}
+
+.image-frame-user {
+    border: .8rem solid var(--green-color);
+    box-shadow: 0 .3rem var(--dark-green-color);
+}
+
+.image-frame-bot1 {
+    border: .8rem solid var(--yellow-color);
+    box-shadow: 0 .3rem var(--dark-yellow-color);
+}
+
+.image-frame-bot2 {
+    border: .8rem solid var(--blue-color);
+    box-shadow: 0 .3rem var(--dark-blue-color);
 }
 
 /* Profile info 
@@ -55,7 +67,7 @@
 /* Stats */
 .stats-container {
     margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .user-circle-diagram {

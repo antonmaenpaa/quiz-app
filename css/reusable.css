@@ -27,7 +27,6 @@
 
 body {
     font-family: sans-serif;
-    height: 100vh;
     color: var(--black-color);
 }
 
@@ -125,8 +124,8 @@ h3 {
 /* Go back button */
 .back-arrow {
     position: absolute;
-    padding-top: 2rem;
-    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
 }
 
 .back-arrow span{
