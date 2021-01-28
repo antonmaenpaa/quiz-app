@@ -205,6 +205,12 @@ function checkGuess(playerName, userGuess) {
     }
 }
 
+const restartButton = document.getElementById("restart-button");
+restartButton.addEventListener("click", () => {
+  window.location.reload();
+});
+
+
 // Bot-1's guessing function   
 
 // Bot-2's guessing function
