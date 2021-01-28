@@ -15,7 +15,7 @@
     height: 3rem;
 }
 
-.btn {
+.btn, .restart-button {
     border: none;
     background-color: var(--pink-color);
     color: #fff;
@@ -30,11 +30,11 @@
     transition: all 300ms ease;
 }
 
-.btn a {
+.restart-button, .btn a {
     color: #fff;
 }
 
-.btn:hover {
+.btn:hover , .restart-button:hover{
     opacity: .9;
     border-radius: 1.5rem;
     width: 12rem;
