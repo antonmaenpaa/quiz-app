@@ -14,19 +14,17 @@
     <title>Stats</title>
 </head>
 
-<body>
+<body class="stats-bg">
     <main class="flex">
         <!-- Back button -->
         <a class="back-arrow" href="index.html">
             <span class="material-icons">keyboard_backspace</span>
         </a>
         <!-- User -->
-        <div class="green-bg flex flex-1 center column">
-            <div class="profile-image-container">
-                <img class="profile-image" src="./assets/player-win.svg" alt="User"/>
-            </div>
+        <div class="profile-container flex flex-1 center column">
+            <img class="profile-image image-frame-user" src="./assets/player-win.svg" alt="User"/>
             <div class="profile-info flex center column">
-                <h2>User</h2>
+                <h2>User</h2> <!-- Change Username with js -->
                 <div class="personality">
                     <ul>
                         <li>Center of the party</li>
@@ -35,17 +33,15 @@
                     </ul>
                 </div>
             </div>
-            <div class="green-info-divider flex flex-1"></div>
+            <div class="green-info-divider"></div>
             <div class="stats-container flex center column">
                 <div class="user-circle-diagram"></div>
                 <h3>xx % wins</h3> <!-- Add text with js -->
             </div>
         </div>
         <!-- Bot 1 Frank / Muffin -->
-        <div class="yellow-bg flex flex-1 center column">
-            <div class="profile-image-container">
-                <img class="profile-image" src="./assets/bot1-win.svg" alt="Frank"/>
-            </div>
+        <div class="profile-container flex flex-1 center column">
+            <img class="profile-image image-frame-bot1" src="./assets/bot1-win.svg" alt="Frank"/>
             <div class="profile-info flex center column">
                 <h2>Frank</h2>
                 <div class="personality">
@@ -56,17 +52,15 @@
                     </ul>
                 </div>
             </div>
-            <div class="yellow-info-divider flex flex-1"></div>
+            <div class="yellow-info-divider"></div>
             <div class="stats-container flex center column">
                 <div class="bot1-circle-diagram"></div>
                 <h3>xx % wins</h3> <!-- Add text with js -->
             </div>
         </div>
         <!-- Bot 2 Lilly / Gift -->
-        <div class="blue-bg flex flex-1 center column">
-            <div class="profile-image-container">
-                <img class="profile-image" src="./assets/bot2-win.svg" alt="Lilly"/>
-            </div>
+        <div class="profile-container flex flex-1 center column">
+            <img class="profile-image image-frame-bot2" src="./assets/bot2-win.svg" alt="Lilly"/>
             <div class="profile-info flex center column">
                 <h2>Lilly</h2>
                 <div class="personality">
@@ -77,7 +71,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="blue-info-divider flex flex-1"></div>
+            <div class="blue-info-divider"></div>
             <div class="stats-container flex center column">
                 <div class="bot2-circle-diagram"></div>
                 <h3>xx % wins</h3> <!-- Add text with js -->
