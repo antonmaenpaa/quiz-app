@@ -1,17 +1,30 @@
 /* index CSS */
 
+/* MAIN */
+.logo-small{
+    margin-top: 2.5rem;
+    width: 55%;
+}
 
-.main-menu-container {
-    position: relative;
-    width: 80%;
-    margin: 0 auto;
+/* .grey-info-divider => reusable.css */
+
+/* How to play icon */
+.how-to-play-icon span {
+    cursor: pointer;
+    color: var(--black-color);
+    font-size: 2.5rem;
+    transition: .3s ease;
+}
+
+.how-to-play-icon span:hover {
+    color:  #4C545B;
 }
 
 /* Menu buttons */
 .menu-buttons-container {
-    position: absolute;
-    bottom: 3rem;
     width: 80%;
+    position: fixed;
+    bottom: 2rem;
 }
 
 .menu-button {
@@ -27,30 +40,30 @@
 /* Start button */
 .primary-button {
     padding: .8rem;
-    width: 90%;
+    width: 30%;
     background-color: var(--dark-blue-color);
 }
 
 .primary-button:hover {
-    width: 100%;
+    width: 35%;
     background-color: var(--blue-color);
 }
 
 /* Stats button */
 .secondary-button {
     padding: .5rem;
-    width: 70%;
+    width: 20%;
     background-color: var(--dark-pink-color);
 }
 
 .secondary-button:hover {
-    width: 80%;
+    width: 25%;
     background-color: var(--pink-color);
 }
 
 /* Sign out button */
 .sign-out-button {
-    width: 30%;
+    width: 20%;
     margin-top: 5rem;
     padding: .2rem;
     background-color: white;
@@ -64,24 +77,13 @@
     color: white;
 }
 
-/* How to play icon */
-.how-to-play-icon span {
-    cursor: pointer;
-    color: var(--black-color);
-    font-size: 2.5rem;
-    transition: .3s ease;
-}
-
-.how-to-play-icon span:hover {
-    color:  #4C545B;
-}
-
 
 /* ASIDE */
 
 /* Background image */
 .main-menu-bg {
     background-image: url(/assets/mainmenu-bg.jpg);
+    height: 100vh;
     background-size: cover;
     background-position: center;
 }
@@ -94,7 +96,7 @@
 /* First place */
 .first-place {
     position: absolute;
-    top: 3%;
+    top: 10%;
     left: 15%;
     width: 40%;
 }
@@ -131,7 +133,7 @@
 .third-place {
     position: absolute;
     left: 30%;
-    top: 55%;
+    top: 60%;
     width: 28%;
 }
 
