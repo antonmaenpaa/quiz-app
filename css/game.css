@@ -84,9 +84,12 @@
     background-color: white;
 }
 
+#higher-lower {
+    font-size: 3rem;
+}
+
 #bot-one-turn,
 #bot-two-turn,
-#higher-lower,
 #user-turn,
 #count-down {
     font-size: 2rem;
