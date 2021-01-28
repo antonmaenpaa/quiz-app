@@ -95,8 +95,8 @@ function generateRandomTurn(){
 
 // logic for bot one, compare with dealer random number
 function getBotOneInput() {
-
     const dealerSpeak = document.getElementById('higher-lower');
+    dealerSpeak.innerHTML = '';
     const userTurn = document.getElementById("user-turn");
 
     const botTwoPTag = document.getElementById('bot-two-turn')
@@ -107,13 +107,17 @@ function getBotOneInput() {
     // Math.floor(Math.random() * 20 + 1);
     
     console.log('bot-one', randomNumberbotOne)
-
+    
     if (dealtCard === randomNumberbotOne) {
-        console.log('you Win')
-        dealerSpeak.innerText = 'Frank Wins!'
+        setTimeout(() => {
+            dealerSpeak.innerText = 'Frank Wins!'
+            setTimeout(() => {
+                const candy = document.getElementById('bot-one-img');
+                candy.classList.remove('hide');
+            }, 2000);
+        }, 3000);
         // adds candy when bot one wins round
-        const candy = document.getElementById('bot-one-img');
-        candy.classList.remove('hide');
+
         
         userTurn.innerText = "";
         botTwoPTag.innerText = "";
@@ -122,19 +126,23 @@ function getBotOneInput() {
     } else if(dealtCard > randomNumberbotOne) {
         setTimeout(() => {
             botOnePTag.innerText = 'my guess is: ' + randomNumberbotOne;
-        }, Math.floor(Math.random() * 8000) + 3);
+            setTimeout(() => {
+                dealerSpeak.innerHTML = 'Higher!';
+            }, 2000);
+        }, Math.floor(Math.random() * 6000) + 3);
         userTurn.innerText = "";
         botTwoPTag.innerText = "";
-        dealerSpeak.innerHTML = 'Higher';
         console.log('higher')
 
     } else if (dealtCard < randomNumberbotOne) {
         setTimeout(() => {
             botOnePTag.innerText = 'my guess is: ' + randomNumberbotOne;
-        }, Math.floor(Math.random() * 8000) + 3);
+            setTimeout(() => {
+                dealerSpeak.innerHTML = 'Lower!';
+            }, 2000);
+        }, Math.floor(Math.random() * 6000) + 3);
         userTurn.innerText = "";
         botTwoPTag.innerText = ""
-        dealerSpeak.innerHTML = 'Lower';
         console.log('lower')
     }
 }
@@ -142,23 +150,28 @@ function getBotOneInput() {
 // logic for bot two, compare with dealer random number
 function getBotTwoInput() {
     const dealerSpeak = document.getElementById('higher-lower');
+    dealerSpeak.innerHTML = '';
     const userTurn = document.getElementById("user-turn");
 
     const botOnePTag = document.getElementById('bot-one-turn')
     const botTwoPTag = document.getElementById('bot-two-turn')
-    botTwoPTag.innerText = 'My turn';
-
+    botTwoPTag.innerText = 'Lillys turn';
 
     const randomNumberbotTwo = dealtCard;
     //Math.floor(Math.random() * 20 + 1)
+
     console.log('bot-two', randomNumberbotTwo)
 
     if (dealtCard === randomNumberbotTwo) {
 
         // adds candy when bot two wins round
-        const candyBotTwo = document.getElementById('bot-two-img');
-        candyBotTwo.classList.remove('hide');
-        dealerSpeak.innerText = 'Lilly Wins!'
+        setTimeout(() => {
+            dealerSpeak.innerText = 'Lilly Wins!';
+            setTimeout(() => {
+                const candyBotTwo = document.getElementById('bot-two-img');
+                candyBotTwo.classList.remove('hide');
+            }, 2000);
+        }, 3000);
         userTurn.innerText = "";
         botOnePTag.innerText = "";
         setBot2WinsToLS();
@@ -166,24 +179,32 @@ function getBotTwoInput() {
     } else if(dealtCard > randomNumberbotTwo) {
         setTimeout(() => {
             botTwoPTag.innerText = 'my guess is: ' + randomNumberbotTwo;
-        }, Math.floor(Math.random() * 8000) + 3);
+            setTimeout(() => {
+                dealerSpeak.innerHTML = 'Higher!';
+            }, 2000);
+        }, Math.floor(Math.random() * 6000) + 3);
         userTurn.innerText = "";
         botOnePTag.innerText = "";
-        dealerSpeak.innerHTML = 'Higher';
+        dealerSpeak.innerHTML = '';
         console.log('higher')
 
     } else if(dealtCard < randomNumberbotTwo) {
         setTimeout(() => {
             botTwoPTag.innerText = 'my guess is: ' + randomNumberbotTwo;
-        }, Math.floor(Math.random() * 8000) + 3);
+            setTimeout(() => {
+                dealerSpeak.innerHTML = 'Lower!';
+            }, 2000);
+        }, Math.floor(Math.random() * 6000) + 3);
         userTurn.innerText = "";
         botOnePTag.innerText = "";
-        dealerSpeak.innerHTML = 'Lower';
         console.log('lower')
     }
 }
 
 function getUserInput() {
+    const dealerSpeak = document.getElementById('higher-lower');
+    dealerSpeak.innerText = "";
+
     const botOnePTag = document.getElementById('bot-one-turn')
     const botTwoPTag = document.getElementById('bot-two-turn')
     botOnePTag.innerText = '';
@@ -196,8 +217,8 @@ function getUserInput() {
     
     const userForm = document.getElementById('form');
     userForm.addEventListener('submit', (e) => {
-        fetchUserInput(playerName);
         e.preventDefault();
+        fetchUserInput(playerName);
     })
 }
 
@@ -222,14 +243,27 @@ function checkGuess(playerName, userGuess) {
         candyUser.classList.remove('hide');
         setUserWinsToLS();
         console.log(playerWins);
+        setTimeout(() => {
+            userTurn.innerText = "";
+            dealerSpeak.innerText = `${playerName} Wins!`
+            setTimeout(() => {
+                let candyUser = document.getElementById('user-img');
+                candyUser.classList.remove('hide');
+            }, 2000)
+        }, 3000);
+
         guessedRight = true;
     } 
     else if(dealtCard < userGuess) {
-        dealerSpeak.innerText = 'Lower!';
+        setTimeout(() => {
+            dealerSpeak.innerText = 'Lower!';
+        }, 2000);
         console.log('Dealer: Lower')
     } 
     else if(dealtCard > userGuess) {
-        dealerSpeak.innerText = 'Higher!';
+        setTimeout(() => {
+            dealerSpeak.innerText = 'Higher!';
+        }, 2000);
         console.log('Dealer: Higher');
     }
 }
