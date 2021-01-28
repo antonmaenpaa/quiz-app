@@ -6,6 +6,29 @@ console.log('Dealer card: ' + dealtCard);
 // An array with user and bots
 let whosTurn = ['user', 'botOne', 'botTwo'];
 
+function setUserWinsToLS() {
+    const usernameInput = JSON.parse(localStorage.getItem("user"));
+    const playerName = usernameInput.username;
+    playerWins = JSON.parse(localStorage.getItem(playerName));
+    playerWins +=1;
+    localStorage.setItem(playerName, playerWins);
+}
+
+function setBot1WinsToLS() {
+    bot1Wins = JSON.parse(localStorage.getItem('bot1Wins'));
+    bot1Wins +=1;
+    localStorage.setItem('bot1Wins', bot1Wins);
+}
+function setBot2WinsToLS() {
+    bot2Wins = JSON.parse(localStorage.getItem('bot2Wins'));
+    bot2Wins +=1;
+    localStorage.setItem('bot2Wins', bot2Wins);
+}
+
+let playerWins;
+let bot1Wins;
+let bot2Wins;
+
 function startGame() {
     const startGame = document.getElementById('start-button');
     startGame.addEventListener('click', () => {
@@ -80,7 +103,8 @@ function getBotOneInput() {
     const botOnePTag = document.getElementById('bot-one-turn')
     botOnePTag.innerText = 'Franks turn';
 
-    const randomNumberbotOne = Math.floor(Math.random() * 20 + 1);
+    const randomNumberbotOne = dealtCard;
+    // Math.floor(Math.random() * 20 + 1);
     
     console.log('bot-one', randomNumberbotOne)
 
@@ -93,6 +117,7 @@ function getBotOneInput() {
         
         userTurn.innerText = "";
         botTwoPTag.innerText = "";
+        setBot1WinsToLS();
         guessedRight = true;
     } else if(dealtCard > randomNumberbotOne) {
         setTimeout(() => {
@@ -124,7 +149,8 @@ function getBotTwoInput() {
     botTwoPTag.innerText = 'My turn';
 
 
-    const randomNumberbotTwo = Math.floor(Math.random() * 20 + 1)
+    const randomNumberbotTwo = dealtCard;
+    //Math.floor(Math.random() * 20 + 1)
     console.log('bot-two', randomNumberbotTwo)
 
     if (dealtCard === randomNumberbotTwo) {
@@ -135,6 +161,7 @@ function getBotTwoInput() {
         dealerSpeak.innerText = 'Lilly Wins!'
         userTurn.innerText = "";
         botOnePTag.innerText = "";
+        setBot2WinsToLS();
         guessedRight = true;
     } else if(dealtCard > randomNumberbotTwo) {
         setTimeout(() => {
@@ -193,6 +220,8 @@ function checkGuess(playerName, userGuess) {
         dealerSpeak.innerText = `${playerName} Wins!`
         let candyUser = document.getElementById('user-img');
         candyUser.classList.remove('hide');
+        setUserWinsToLS();
+        console.log(playerWins);
         guessedRight = true;
     } 
     else if(dealtCard < userGuess) {
