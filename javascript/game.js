@@ -110,8 +110,9 @@ function getBotOneInput() {
     
     if (dealtCard === randomNumberbotOne) {
         setTimeout(() => {
-            dealerSpeak.innerText = 'Frank Wins!'
+            botOnePTag.innerText = 'my guess is: ' + randomNumberbotOne;
             setTimeout(() => {
+                dealerSpeak.innerText = 'Frank Wins!'
                 const candy = document.getElementById('bot-one-img');
                 candy.classList.remove('hide');
             }, 2000);
@@ -166,8 +167,9 @@ function getBotTwoInput() {
 
         // adds candy when bot two wins round
         setTimeout(() => {
-            dealerSpeak.innerText = 'Lilly Wins!';
+            botTwoPTag.innerText = 'my guess is: ' + randomNumberbotTwo;
             setTimeout(() => {
+                dealerSpeak.innerText = 'Lilly Wins!';
                 const candyBotTwo = document.getElementById('bot-two-img');
                 candyBotTwo.classList.remove('hide');
             }, 2000);
