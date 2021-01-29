@@ -1,4 +1,11 @@
 
+
+window.addEventListener('load', gamePlay);
+
+function gamePlay() {
+    startGame();
+}
+
 // Dealer randomly deals a card between 1 and 20
 let dealtCard = Math.floor(Math.random()* 20) + 1;
 console.log('Dealer card: ' + dealtCard);
@@ -63,9 +70,6 @@ function counter() {
     }, 1000);
 }
 
-function gamePlay() {
-    startGame();
-}
 
 // function that pick a random bot or the user
 function generateRandomTurn(){
