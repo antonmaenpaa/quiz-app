@@ -13,6 +13,8 @@ console.log('Dealer card: ' + dealtCard);
 // An array with user and bots
 let whosTurn = ['user', 'botOne', 'botTwo'];
 
+
+// save wins to LS
 function setUserWinsToLS() {
     const usernameInput = JSON.parse(localStorage.getItem("user"));
     const playerName = usernameInput.username;
@@ -32,9 +34,38 @@ function setBot2WinsToLS() {
     localStorage.setItem('bot2Wins', bot2Wins);
 }
 
+
+// save losses to LS
+function setBot1LossesToLS() {
+    bot1Losses = JSON.parse(localStorage.getItem('bot1Losses'));
+    bot1Losses +=1;
+    localStorage.setItem('bot1Losses', bot1Losses);
+    
+}
+function setBot2LossesToLS() {
+    bot2Losses = JSON.parse(localStorage.getItem('bot2Losses'));
+    bot2Losses +=1;
+    localStorage.setItem('bot2Losses', bot2Losses);
+
+}
+function setUserLossesToLS() {
+    const usernameInput = JSON.parse(localStorage.getItem("user"));
+    const playerName = usernameInput.username;
+    playerWins = JSON.parse(localStorage.getItem(playerName));
+
+    playerLosses = JSON.parse(localStorage.getItem(playerName + ' losses'));
+    playerLosses +=1;
+    localStorage.setItem(playerName + ' losses', playerLosses);
+
+}
+
 let playerWins;
 let bot1Wins;
 let bot2Wins;
+
+let playerLosses;
+let bot1Losses;
+let bot2Losses;
 
 function startGame() {
     const startGame = document.getElementById('start-button');
@@ -127,6 +158,8 @@ function getBotOneInput() {
         userTurn.innerText = "";
         botTwoPTag.innerText = "";
         setBot1WinsToLS();
+        setBot2LossesToLS();
+        setUserLossesToLS();
         guessedRight = true;
     } else if(dealtCard > randomNumberbotOne) {
         setTimeout(() => {
@@ -181,6 +214,8 @@ function getBotTwoInput() {
         userTurn.innerText = "";
         botOnePTag.innerText = "";
         setBot2WinsToLS();
+        setBot1LossesToLS();
+        setUserLossesToLS();
         guessedRight = true;
     } else if(dealtCard > randomNumberbotTwo) {
         setTimeout(() => {
@@ -248,6 +283,8 @@ function checkGuess(playerName, userGuess) {
         let candyUser = document.getElementById('user-img');
         candyUser.classList.remove('hide');
         setUserWinsToLS();
+        setBot1LossesToLS();
+        setBot2LossesToLS();
         console.log(playerWins);
         setTimeout(() => {
             userTurn.innerText = "";
