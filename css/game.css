@@ -46,6 +46,10 @@
     background-color: var(--blue-color);
     display: flex;
     align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 #user-value {
@@ -92,7 +96,7 @@
 #bot-two-turn,
 #user-turn,
 #count-down {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 
@@ -103,7 +107,7 @@
 #bot-one-img,
 #bot-two-img,
 #player-img {
-    width: 10rem;
+    width: 9rem;
 }
 
 .border-input {
