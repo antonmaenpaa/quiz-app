@@ -14,7 +14,8 @@
     <script src="./javascript/game.js"></script>
     <script src="./javascript/login.js"></script>
     <script src="./javascript/register.js"></script>
-    <script defer src="./javascript/app.js"></script>
+    <!-- <script defer src="./javascript/app.js"></script> -->
+    <script defer src="./javascript/mainMenu.js"></script>
 </head>
 <body class="flex">
     <main class="flex flex-1 center column">
@@ -39,19 +40,17 @@
         <!-- Top list -->
         <div class="balloon-container flex column xcenter">
             <!-- First place -->
-            <div class="first-place">
+            <div class="first-place" id="first-p">
                 <img src="./assets/pink-balloon.svg" alt="First place">
-                <img class="first-place-image" src="./assets/player-win.svg" alt="First place">
             </div>
             <!-- Second place -->
-            <div class="second-place">
+            <div class="second-place" id="second-p">
                 <img src="./assets/yellow-balloon.svg" alt="Second place">
-                <img class="second-place-image" src="./assets/bot1-win.svg" alt="Second place">
             </div>
             <!-- Third place -->
-            <div class="third-place">
+            <div class="third-place" id="third-p">
                 <img src="./assets/green-balloon.svg" alt="Third place">
-                <img class="third-place-image" src="./assets/bot2-win.svg" alt="Third place">
+           
             </div>
         </div>
     </aside>
