@@ -13,6 +13,11 @@
     <!-- <script defer src="./javascript/modal.js"></script> -->
     <title>Stats</title>
     <script src="./javascript/statistik.js"></script>
+    <script src="./javascript/player-stats.js"></script>
+    <script src="./javascript/botOne-stats.js"></script>
+    <script src="./javascript/botTwo-stats.js"></script>
+    <script src="https://cdn.anychart.com/js/8.0.1/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/js/8.0.1/anychart-pie.min.js"></script>
 </head>
 
 <body class="stats-bg">
@@ -39,8 +44,8 @@
             </div>
             <div class="green-info-divider"></div>
             <div class="stats-container flex center column">
-                <div class="user-circle-diagram"></div>
-                <h3>xx % wins</h3> <!-- Add text with js -->
+                <div id="container-player" style="width: 100%; height: 100%"></div>
+        
             </div>
         </div>
         <!-- Bot 1 Frank / Muffin -->
@@ -58,8 +63,9 @@
             </div>
             <div class="yellow-info-divider"></div>
             <div class="stats-container flex center column">
-                <div class="bot1-circle-diagram"></div>
-                <h3>xx % wins</h3> <!-- Add text with js -->
+                <!-- <div class="bot1-circle-diagram"></div> -->
+                <div id="container-bot1" style="width: 100%; height: 100%"></div>
+                <!-- <h3>xx % wins</h3> Add text with js -->
             </div>
         </div>
         <!-- Bot 2 Lilly / Gift -->
@@ -77,8 +83,7 @@
             </div>
             <div class="blue-info-divider"></div>
             <div class="stats-container flex center column">
-                <div class="bot2-circle-diagram"></div>
-                <h3>xx % wins</h3> <!-- Add text with js -->
+                <div id="container-bot2" style="width: 100%; height: 100%"></div>
             </div>
         </div>
     </main>
