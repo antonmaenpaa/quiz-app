@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/stats.css" />
     <link rel="stylesheet" href="./css/reusable.css" />
@@ -16,109 +13,70 @@
     <title>Game</title>
   </head>
 
-  <body>
-    <main class="page-padding">
-      <div class="flex flex-1">
-        <a class="back-arrow" href="index.html">
-          <span class="material-icons">keyboard_backspace</span>
-        </a>
-      </div>
-      <section>
-        <!-- Dealer -->
-        <div class="flex center ycenter column">
-          <img id="dealer" src="./assets/dealer.svg" alt="Dealer" />
+  <body class="flex">
+    <main class="game-bg flex flex-2">
+      <a class="back-arrow" href="index.html">
+        <span class="material-icons">keyboard_backspace</span>
+      </a>
+      <div class="all-players-container flex column">
+        <!-- Bot 1: Frank / Muffin -->
+        <div class="player-container flex ycenter">
+          <img class="player-image" src="./assets/bot1.svg" alt="Frank" />
+          <div class="candy-container">
+            <img id="bot-one-img" class="hide" src="./assets/candy-score.svg" alt="score"/>
+            <!-- <img src="./assets/candy-score-empty.svg" alt="score">
+                      <img src="./assets/candy-score-empty.svg" alt="score"> -->
+          </div>
+          <p id="bot-one-turn" class="bot-answer">Hej</p>
         </div>
-        <div class="flex center space-evenly">
-          <!-- Bot 1: Frank / Muffin -->
-          <div class="flex column center ycenter">
-            <p id="bot-one-turn"></p>
-            <img src="./assets/bot1.svg" alt="Frank" />
-            <div class="candy-container">
-              <img
-                src="./assets/candy-score.svg"
-                id="bot-one-img"
-                class="hide"
-                alt="score"
-              />
-              <!-- <img src="./assets/candy-score-empty.svg" alt="score">
-                        <img src="./assets/candy-score-empty.svg" alt="score"> -->
-            </div>
+        <!-- Bot 2: Lilly / Gift -->
+        <div class="player-container flex ycenter">
+          <img class="player-image" src="./assets/bot2.svg" alt="Lilly" />
+          <div class="candy-container">
+            <img id="bot-two-img" class="hide" src="./assets/candy-score.svg" alt="score"/>
+            <!-- <img src="./assets/candy-score.svg" alt="score">
+                      <img src="./assets/candy-score-empty.svg" alt="score"> -->
           </div>
-          <p id="higher-lower">Dealer</p>
-
-          <!-- Bot 2: Lilly / Gift -->
-          <div class="flex column center ycenter">
-            <p id="bot-two-turn"></p>
-            <img src="./assets/bot2.svg" alt="Lilly" />
-            <div class="candy-container">
-              <img
-                src="./assets/candy-score.svg"
-                id="bot-two-img"
-                class="hide"
-                alt="score"
-              />
-              <!-- <img src="./assets/candy-score.svg" alt="score">
-                        <img src="./assets/candy-score-empty.svg" alt="score"> -->
-            </div>
-          </div>
+          <p id="bot-two-turn" class="bot-answer">Hej</p>
         </div>
         <!-- User -->
-        <div class="flex column center ycenter">
-            <p id="user-turn"></p>
-          <img id="player-img" src="./assets/player.svg" alt="User" />
-        </div>
-        <!-- User block -->
-        <div class="user-input-block flex space-between center">
-          <!-- Illustration of possible numbers -->
-          <div class="flex center ycenter">
-            <p class="margin1">1</p>
-            <div class="small-rect"></div>
-            <div class="small-rect"></div>
-            <div class="small-rect"></div>
-            <div class="small-rect add-white-bg"></div>
-            <div class="small-rect-I add-white-bg"></div>
-            <div class="small-rect add-white-bg"></div>
-            <div class="small-rect add-white-bg"></div>
-            <div class="small-rect"></div>
-            <div class="small-rect"></div>
-            <div class="small-rect-I"></div>
-            <div class="small-rect"></div>
-            <div class="small-rect"></div>
-            <div class="small-rect"></div>
-            <div class="small-rect"></div>
-            <div class="small-rect-I"></div>
-            <div class="small-rect"></div>
-            <div class="small-rect"></div>
-            <div class="small-rect"></div>
-            <div class="small-rect"></div>
-            <div class="small-rect"></div>
-            <p class="margin1">20</p>
+        <div class="player-container flex ycenter space-between">
+          <img class="player-image" src="./assets/player.svg" alt="User" />
+          <div class="user-input-block flex space-between xcenter">
+            <!-- Input field -->
+            <div class="flex column ycenter space-between">
+              <p id="user-turn">Hej</p>
+              <form id="form">
+                <input id="user-input" type="number" required />
+                <input class="btn" id="user-value" type="submit" value="Check" />
+              </form>
+            </div>
           </div>
-          <!-- Input field -->
-          <form id="form" class="flex center ycenter">
-            <input id="user-input" type="number" required />
-            <input class="btn" id="user-value" type="submit" value="Check" />
-          </form>
-          <p id="count-down">count down</p>
-          <!-- Flytta till ovanför dealern -->
-          <p class="message" id="number-of-guesses"></p>
-          <!-- Flytta till ovanför dealern -->
-          <!-- User score -->
+            <!-- User score -->
           <div class="flex candy-container">
-            <img
-              src="./assets/candy-score.svg"
-              id="user-img"
-              class="hide"
-              alt="score"
-            />
+            <img id="user-img" class="hide" src="./assets/candy-score.svg" alt="score"/>
             <!-- <img src="./assets/candy-score-empty.svg" alt="score">
                     <img src="./assets/candy-score-empty.svg" alt="score"> -->
           </div>
+        </div>
+        <div>
+          <!-- Knappar -->
+          <!--
           <button class="restart" id="restart-button">Restart</button>
           <button class="start" id="start-button">Start</button>
           <button class="play-again" id="playAgain-button">Play Again</button>
         </div>
-      </section>
+        -->
+      </div>
     </main>
+    <aside class="flex flex-1 column ycenter">
+      <!-- Dealer -->
+      <img id="dealer" class="dealer-image" src="./assets/dealer.svg" alt="Dealer" />
+      <!-- Dealer feedback -->
+      <p id="higher-lower">Dealer</p>
+      <div class="timer flex center">
+        <p id="count-down">count down</p>
+      </div>
+    </aside>
   </body>
 </html>
