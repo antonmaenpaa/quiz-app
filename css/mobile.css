@@ -1,6 +1,6 @@
 @media (max-width: 40em) {
 
-    /* INDEX */
+    /* INDEX - Main menu */
     .main-menu-bg {
     display: none;
     }
@@ -10,6 +10,20 @@
         width: 80%;
     }
 
+    /* stats */
+    section {
+        flex-direction: column;
+    }
+    /* Register / Login */
+    .login-container {
+        width: 100%;
+    }
+
+    /* stats */
+    main {
+        flex-direction: column;
+    }
+    
     .secondary-button {
         width: 60%;
     }

@@ -1,10 +1,52 @@
+
 @media (max-width: 80em) {
-    /* INDEX */
+/* Register / Login */    
+    .login-bg {
+        display: none;
+    }
+    .login-container {
+        width: 50%;
+        margin: auto;
+    }
+    .logo {
+        width: 70%;
+        margin-top: 0rem;
+    }
+
+    /* INDEX - Main menu */
     .first-place-number,
     .second-place-number,
     .third-place-number {
         font-size: 2rem;
     }
+
+
+    /* stats page */
+    .profile-image {
+        width: 10rem;
+    }
+
+    li {
+        font-size: 0.8rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h2,
+    li {
+        transition: font-size 2s;
+    }
+
+    ul {
+        padding-left: 0;
+    }
+
+    .profile-image {
+        transition: width 2s;
+    }
+
 
     /* Start button */
     .primary-button {
