@@ -11,5 +11,47 @@
         width: 70%;
         margin-top: 0rem;
     }
-    
+
+    .first-place-number,
+    .second-place-number,
+    .third-place-number {
+        font-size: 2rem;
+    }
+
+
+    /* stats page */
+    .profile-image {
+        width: 10rem;
+    }
+
+    li {
+        font-size: 0.8rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h2,
+    li {
+        transition: font-size 2s;
+    }
+
+    ul {
+        padding-left: 0;
+    }
+
+    .profile-image {
+        transition: width 2s;
+    }
+
+
+    /* Start button */
+    .primary-button {
+        min-width: 50%;
+    }
+
+    .secondary-button {
+        min-width: 40%;
+    }
 }

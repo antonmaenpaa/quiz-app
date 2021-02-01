@@ -1,15 +1,39 @@
 @media (max-width: 40em) {
 
-        /* index */
+    /* index */
+    .main-menu-bg {
+    display: none;
+    }
 
-        /* game */
+    /* Start button */
+    .primary-button {
+        width: 80%;
+    }
 
-        /* stats */
-        section {
-            flex-direction: column;
-        }
-        /* Register / Login */
-        .login-container {
-            width: 100%;
-        }
+    /* stats */
+    section {
+        flex-direction: column;
+    }
+    /* Register / Login */
+    .login-container {
+        width: 100%;
+    }
+
+    /* stats */
+    main {
+        flex-direction: column;
+    }
+    
+    .secondary-button {
+        width: 60%;
+    }
+
+    .sign-out-button {
+        width: 40%;
+    }
+
+    /* game */
+
+    /* stats */
+ 
 }
