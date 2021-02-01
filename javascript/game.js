@@ -308,12 +308,6 @@ function checkGuess(playerName, userGuess, userTurn) {
     }
 }
 
-/* Ta bort eftersom vi har 'Play again' ? // Jen */
-const restartButton = document.getElementById("restart-button");
-restartButton.addEventListener("click", () => {
-  window.location.reload();
-});
-
 
 
 // Bot-1's guessing function   
