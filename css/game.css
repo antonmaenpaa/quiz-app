@@ -92,7 +92,7 @@
     width: 12rem;
 }
 
-/* User input */
+/* User input - Kan ta bort input-field klassen när input endast visas när det är spelarens tur */
 .input-field {
     outline: none;
     width: 12rem;
