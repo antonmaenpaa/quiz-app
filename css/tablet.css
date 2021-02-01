@@ -1,5 +1,15 @@
 @media (max-width: 62em) {
-
-
+/* Register / Login */    
+    .login-bg {
+        display: none;
+    }
+    .login-container {
+        width: 50%;
+        margin: auto;
+    }
+    .logo {
+        width: 70%;
+        margin-top: 0rem;
+    }
     
 }

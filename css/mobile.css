@@ -8,4 +8,8 @@
         section {
             flex-direction: column;
         }
+        /* Register / Login */
+        .login-container {
+            width: 100%;
+        }
 }
