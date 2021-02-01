@@ -1,4 +1,17 @@
 @media (max-width: 62em) {
+/* Register / Login */    
+    .login-bg {
+        display: none;
+    }
+    .login-container {
+        width: 50%;
+        margin: auto;
+    }
+    .logo {
+        width: 70%;
+        margin-top: 0rem;
+    }
+
     .first-place-number,
     .second-place-number,
     .third-place-number {
@@ -41,5 +54,4 @@
     .secondary-button {
         min-width: 40%;
     }
-
 }
