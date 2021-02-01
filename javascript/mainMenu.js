@@ -79,21 +79,21 @@ function checkWhosInThirdPlace(botOne, botTwo, user) {
         let img = document.createElement('img');
         img.src = './assets/bot1-win.svg';
         let userImgs = document.getElementById('third-p').appendChild(img);
-        userImgs.classList.add('second-place-image');
+        userImgs.classList.add('third-place-image');
     }
 
     if(user < botOne && user < botTwo || user < botOne && user < botTwo) {
         let img = document.createElement('img');
         img.src = './assets/player-win.svg';
         let userImgs = document.getElementById('third-p').appendChild(img);
-        userImgs.classList.add('second-place-image');
+        userImgs.classList.add('third-place-image');
     }
 
     if(botTwo < botOne && botTwo < user || botTwo < botOne && botTwo < user) {
         let img = document.createElement('img');
         img.src = './assets/bot2-win.svg';
         let userImgs = document.getElementById('third-p').appendChild(img);
-        userImgs.classList.add('second-place-image');
+        userImgs.classList.add('third-place-image');
     }
 }
 
