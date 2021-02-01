@@ -1,4 +1,5 @@
-@media (max-width: 62em) {
+@media (max-width: 80em) {
+    /* INDEX */
     .first-place-number,
     .second-place-number,
     .third-place-number {
@@ -12,5 +13,66 @@
 
     .secondary-button {
         min-width: 40%;
+    }
+
+
+    /* GAME */
+    .responsive-layout-game {
+        display: block;
+    }
+
+    .game-bg {
+        height: 70vh;
+    }
+
+    /* Layout players */
+    .all-players-container {
+        width: 90%;
+    }
+
+    .player-container {
+        margin-top: 1rem;
+    }
+
+    /* Score */
+    .candy-container img {
+        width: 3rem;
+    }
+
+    /* User input */
+    .input-field {
+        width: 10rem;
+        height: 2rem;
+        font-size: 1.3rem;
+    }
+
+    /* Aside container - dealer */
+    .aside-container {
+        margin-top: 1rem;
+        width: 90%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .dealer-image {
+        width: 15rem;
+        margin-bottom: 0;
+    }
+
+    .dealer-feedback {
+        justify-content: space-between;
+        height: 12rem;
+    }
+
+    .timer {
+        margin-top: 1rem;
+        margin-bottom: 0;
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .game-buttons-container {
+        width: 10rem;
     }
 }

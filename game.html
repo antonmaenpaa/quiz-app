@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="./css/stats.css" />
     <link rel="stylesheet" href="./css/reusable.css" />
     <link rel="stylesheet" href="./css/game.css" />
+    <link rel="stylesheet" href="./css/tablet.css">
+    <link rel="stylesheet" href="./css/mobile.css">
     <script defer src="./javascript/game.js"></script>
     <title>Game</title>
   </head>
 
-  <body class="flex">
+  <body class="responsive-layout-game">
     <main class="game-bg flex flex-2">
       <a class="back-arrow" href="index.html">
         <span class="material-icons">keyboard_backspace</span>
@@ -68,16 +70,17 @@
         <!-- Dealer -->
         <img id="dealer" class="dealer-image" src="./assets/dealer.svg" alt="Dealer" />
         <!-- Dealer feedback -->
-        <p id="higher-lower">Dealer</p>
-        <div class="timer flex center">
-          <p id="count-down">count down</p>
+        <div class="dealer-feedback flex ycenter column">
+          <p id="higher-lower">Dealer</p>
+          <div class="timer flex center">
+            <p id="count-down"></p>
+          </div>
         </div>
         <!-- Knappar -->
-        <div class="flex ycenter column">
+        <div class="game-buttons-container flex ycenter column">
           <button id="start-button" class="game-menu-button">Start</button>
           <button id="playAgain-button" class="game-menu-button">Play Again</button>
-        </div>
-        
+        </div> 
       </div>
     </aside>
   </body>

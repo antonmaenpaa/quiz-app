@@ -1,6 +1,6 @@
 @media (max-width: 40em) {
 
-    /* index */
+    /* INDEX */
     .main-menu-bg {
     display: none;
     }
@@ -18,9 +18,103 @@
         width: 40%;
     }
 
-    /* game */
+    /* GAME */
+    .game-bg {
+        height: 75vh;
+    }
 
-    /* stats */
+    /* Layout players */
+    .all-players-container {
+        width: 90%;
+       margin: 2.5rem auto 0 auto;  
+    }
+
+    .player-container {
+        height: 30%;
+        margin-top: .3rem;
+    }
+
+    .white-container {
+        margin: 1rem 0 1rem -4rem;
+    }
+
+    /* Score */
+    .candy-container img {
+        width: 2rem;
+        margin-left: 5rem;
+    }
+
+    /* User input */
+    .input-field {
+        width: 5rem;
+        height: 1.5rem;
+        font-size: .8rem;
+    }
+
+    #form {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .submit-button {
+        width: 3rem;
+        font-size: .8rem;
+        margin-top: 0;
+        margin-left: .5rem;
+    }
+
+    .submit-button:hover {
+        width: 3rem;
+    }
+
+    /* Aside container - dealer */
+    .aside-container {
+        width: 90%;
+        flex-direction: row;
+    }
+
+    .dealer-image {
+        width: 5rem;
+    }
+
+    .dealer-feedback {
+        height: 6rem;
+    }
+
+    .timer {
+        width: 4rem;
+        height: 4rem;
+        margin-top: 0;
+    }
+
+    .game-menu-button {
+        width: 5rem;
+        font-size: .8rem;
+    } 
+
+    .game-menu-button:hover {
+        width: 5rem;
+    }
+
+    .player-image {
+        height: 50%;
+        margin: auto 0;
+    }
+
+    .game-buttons-container {
+        width: 5rem;
+    }
+
+    /* Text size */
+    #higher-lower,
+    #bot-one-turn,
+    #bot-two-turn,
+    #user-turn,
+    #count-down {
+        font-size: 1rem;
+    }
+
+    /* STATS */
     section {
         flex-direction: column;
     }
