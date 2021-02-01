@@ -1,5 +1,16 @@
 @media (max-width: 62em) {
+    .first-place-number,
+    .second-place-number,
+    .third-place-number {
+        font-size: 2rem;
+    }
 
+    /* Start button */
+    .primary-button {
+        min-width: 50%;
+    }
 
-    
+    .secondary-button {
+        min-width: 40%;
+    }
 }
