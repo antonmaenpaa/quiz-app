@@ -10,6 +10,14 @@
         width: 80%;
     }
 
+
+        /* stats */
+        main {
+            flex-direction: column;
+        }
+    }
+
+ 
     .secondary-button {
         width: 60%;
     }
@@ -21,7 +29,5 @@
     /* game */
 
     /* stats */
-    section {
-        flex-direction: column;
-    }
+ 
 }
