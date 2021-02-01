@@ -11,11 +11,11 @@
     }
 
 
-        /* stats */
-        main {
-            flex-direction: column;
-        }
+    /* stats */
+    main {
+        flex-direction: column;
     }
+    
 
  
     .secondary-button {
@@ -30,4 +30,4 @@
 
     /* stats */
  
-
+}
