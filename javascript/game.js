@@ -104,29 +104,62 @@ function generateRandomTurn(){
     counter();
     // generates random value from whosTurn array
     let random = Math.floor(Math.random() * whosTurn.length)
-
+    const userValue = document.getElementById('form');
     // if it's 'user' turn it call on getUserInput function
     if (whosTurn[random] == 'user'){
         const userInput = document.getElementById('user-input');
         userInput.classList.add('border-input');
+        userValue.classList.remove('hide-form');
         getUserInput();
 
     // if it's 'botOne' turn it call on getbotOneInput function
     } else if ( whosTurn[random] == 'botOne'){
         const userInput = document.getElementById('user-input');
-        userInput.classList.remove('border-input');
+        userValue.classList.add('hide-form');
         getBotOneInput();
     
     // if it's 'botTwo' turn, it call on getBotTwoInput function
     } else if (whosTurn[random] == 'botTwo'){
         const userInput = document.getElementById('user-input');
-        userInput.classList.remove('border-input');
+        userValue.classList.add('hide-form');
         getBotTwoInput();
     }
 }
 
 // logic for bot one, compare with dealer random number
 function getBotOneInput() {
+    let bot1GuessAlt = ['One', 'Two', 'Three', 'Four', 'Five'];
+    let randomizeBot1Guess = Math.floor(Math.random() * bot1GuessAlt.length);
+    console.log(randomizeBot1Guess);
+    let randomNumberbotOne = randomizeBot1Guess;
+    if (randomizeBot1Guess === 0) {
+        randomNumberbotOne = dealtCard - 2;
+        if (randomNumberbotOne <= 1) {
+            randomNumberbotOne = 1;
+        }
+    }
+    if (randomizeBot1Guess === 1) {
+        randomNumberbotOne = dealtCard - 1;
+        if (randomNumberbotOne <= 1) {
+            randomNumberbotOne = 1;
+        }
+    }
+    if (randomizeBot1Guess === 2) {
+        randomNumberbotOne = dealtCard;
+    }
+    if (randomizeBot1Guess === 3) {
+        randomNumberbotOne = dealtCard + 1;
+        if(randomNumberbotOne >= 20) {
+            randomNumberbotOne = 20;
+        }
+    }
+    if (randomizeBot1Guess === 4) {
+        randomNumberbotOne = dealtCard + 2;
+        if(randomNumberbotOne >= 20) {
+            randomNumberbotOne = 20;
+        }
+    }
+
     const dealerSpeak = document.getElementById('higher-lower');
     dealerSpeak.innerHTML = '';
     const userTurn = document.getElementById("user-turn");
@@ -134,11 +167,6 @@ function getBotOneInput() {
     const botTwoPTag = document.getElementById('bot-two-turn')
     const botOnePTag = document.getElementById('bot-one-turn')
     botOnePTag.innerText = 'Franks turn';
-
-    const randomNumberbotOne = dealtCard;
-    //Math.floor(Math.random() * 20 + 1); 
-    
-    console.log('bot-one', randomNumberbotOne)
     
     if (dealtCard === randomNumberbotOne) {
         setTimeout(() => {
@@ -149,9 +177,7 @@ function getBotOneInput() {
                 candy.classList.remove('hide');
             }, 2000);
         }, 3000);
-        // adds candy when bot one wins round
 
-        
         userTurn.innerText = "";
         botTwoPTag.innerText = "";
         setBot1WinsToLS();
@@ -184,6 +210,38 @@ function getBotOneInput() {
 
 // logic for bot two, compare with dealer random number
 function getBotTwoInput() {
+    let bot2GuessAlt = ['One', 'Two', 'Three', 'Four', 'Five'];
+    let randomizeBot2Guess = Math.floor(Math.random() * bot2GuessAlt.length);
+    console.log('Bot 2 guesses array:',randomizeBot2Guess);
+    let randomNumberbotTwo = randomizeBot2Guess;
+    if (randomizeBot2Guess === 0) {
+        randomNumberbotTwo = dealtCard - 4;
+        if(randomizeBot2Guess <= 1) {
+            randomNumberbotTwo = 1;
+        }
+    }
+    if (randomizeBot2Guess === 1) {
+        randomNumberbotTwo = dealtCard - 2;
+        if(randomNumberbotTwo <= 1) {
+            randomNumberbotTwo = 1;
+        }
+    }
+    if (randomizeBot2Guess === 2) {
+        randomNumberbotTwo = dealtCard;
+    }
+    if (randomizeBot2Guess === 3) {
+        randomNumberbotTwo = dealtCard + 2;
+        if (randomNumberbotTwo >= 20) {
+            randomNumberbotTwo = 20;
+        }
+    }
+    if (randomizeBot2Guess === 4) {
+        randomNumberbotTwo = dealtCard + 4;
+        if (randomNumberbotTwo >= 20) {
+            randomNumberbotTwo = 20;
+        }
+    }
+
     const dealerSpeak = document.getElementById('higher-lower');
     dealerSpeak.innerHTML = '';
     const userTurn = document.getElementById("user-turn");
@@ -192,10 +250,9 @@ function getBotTwoInput() {
     const botTwoPTag = document.getElementById('bot-two-turn')
     botTwoPTag.innerText = 'Lillys turn';
 
-    const randomNumberbotTwo = dealtCard;
     //Math.floor(Math.random() * 20 + 1)
 
-    console.log('bot-two', randomNumberbotTwo)
+    console.log('bot-two guess:', randomNumberbotTwo)
 
     if (dealtCard === randomNumberbotTwo) {
 
@@ -238,6 +295,7 @@ function getBotTwoInput() {
         console.log('lower')
     }
 }
+
 
 function getUserInput() {
     const dealerSpeak = document.getElementById('higher-lower');
