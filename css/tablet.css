@@ -1,5 +1,26 @@
 @media (max-width: 62em) {
+    .first-place-number,
+    .second-place-number,
+    .third-place-number {
+        font-size: 2rem;
+    }
 
+    /* Start button */
+    .primary-button {
+        min-width: 50%;
+    }
+
+    .primary-button:hover {
+        width: 40%;
+    }
+
+    .secondary-button {
+        min-width: 35%;
+    }
+
+    .secondary-button:hover {
+        width: 25%;
+    }
 
     
 }

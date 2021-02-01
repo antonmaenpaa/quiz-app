@@ -40,7 +40,7 @@
 /* Start button */
 .primary-button {
     padding: .8rem;
-    width: 30%;
+    min-width: 30%;
     background-color: var(--dark-blue-color);
 }
 
@@ -52,7 +52,7 @@
 /* Stats button */
 .secondary-button {
     padding: .5rem;
-    width: 20%;
+    min-width: 20%;
     background-color: var(--dark-pink-color);
 }
 
@@ -63,7 +63,7 @@
 
 /* Sign out button */
 .sign-out-button {
-    width: 20%;
+    min-width: 20%;
     margin-top: 5rem;
     padding: .2rem;
     background-color: white;
