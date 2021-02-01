@@ -1,5 +1,3 @@
-
-
 window.addEventListener('load', gamePlay);
 
 function gamePlay() {
@@ -52,13 +50,12 @@ function setUserLossesToLS() {
     const usernameInput = JSON.parse(localStorage.getItem("user"));
     const playerName = usernameInput.username;
     playerWins = JSON.parse(localStorage.getItem(playerName));
-
     playerLosses = JSON.parse(localStorage.getItem(playerName + ' losses'));
     playerLosses +=1;
     localStorage.setItem(playerName + ' losses', playerLosses);
-
 }
 
+// Global vars to hold wins/losses
 let playerWins;
 let bot1Wins;
 let bot2Wins;
@@ -139,13 +136,13 @@ function getBotOneInput() {
     botOnePTag.innerText = 'Franks turn';
 
     const randomNumberbotOne = dealtCard;
-    // Math.floor(Math.random() * 20 + 1);
+    //Math.floor(Math.random() * 20 + 1); 
     
     console.log('bot-one', randomNumberbotOne)
     
     if (dealtCard === randomNumberbotOne) {
         setTimeout(() => {
-            botOnePTag.innerText = 'my guess is: ' + randomNumberbotOne;
+            botOnePTag.innerText = 'My guess is: ' + randomNumberbotOne;
             setTimeout(() => {
                 dealerSpeak.innerText = 'Frank Wins!'
                 const candy = document.getElementById('bot-one-img');
@@ -163,7 +160,7 @@ function getBotOneInput() {
         guessedRight = true;
     } else if(dealtCard > randomNumberbotOne) {
         setTimeout(() => {
-            botOnePTag.innerText = 'my guess is: ' + randomNumberbotOne;
+            botOnePTag.innerText = 'My guess is: ' + randomNumberbotOne;
             setTimeout(() => {
                 dealerSpeak.innerHTML = 'Higher!';
             }, 2000);
@@ -174,7 +171,7 @@ function getBotOneInput() {
 
     } else if (dealtCard < randomNumberbotOne) {
         setTimeout(() => {
-            botOnePTag.innerText = 'my guess is: ' + randomNumberbotOne;
+            botOnePTag.innerText = 'My guess is: ' + randomNumberbotOne;
             setTimeout(() => {
                 dealerSpeak.innerHTML = 'Lower!';
             }, 2000);
@@ -204,7 +201,7 @@ function getBotTwoInput() {
 
         // adds candy when bot two wins round
         setTimeout(() => {
-            botTwoPTag.innerText = 'my guess is: ' + randomNumberbotTwo;
+            botTwoPTag.innerText = 'My guess is: ' + randomNumberbotTwo;
             setTimeout(() => {
                 dealerSpeak.innerText = 'Lilly Wins!';
                 const candyBotTwo = document.getElementById('bot-two-img');
@@ -219,7 +216,7 @@ function getBotTwoInput() {
         guessedRight = true;
     } else if(dealtCard > randomNumberbotTwo) {
         setTimeout(() => {
-            botTwoPTag.innerText = 'my guess is: ' + randomNumberbotTwo;
+            botTwoPTag.innerText = 'My guess is: ' + randomNumberbotTwo;
             setTimeout(() => {
                 dealerSpeak.innerHTML = 'Higher!';
             }, 2000);
@@ -231,7 +228,7 @@ function getBotTwoInput() {
 
     } else if(dealtCard < randomNumberbotTwo) {
         setTimeout(() => {
-            botTwoPTag.innerText = 'my guess is: ' + randomNumberbotTwo;
+            botTwoPTag.innerText = 'My guess is: ' + randomNumberbotTwo;
             setTimeout(() => {
                 dealerSpeak.innerHTML = 'Lower!';
             }, 2000);
@@ -259,21 +256,22 @@ function getUserInput() {
     const userForm = document.getElementById('form');
     userForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        fetchUserInput(playerName);
+        fetchUserInput(playerName, userTurn);
     })
 }
 
-function fetchUserInput(playerName) {
+function fetchUserInput(playerName, userTurn) {
     const userInput = document.getElementById('user-input');
     const userGuess = Number(userInput.value);
     if (userGuess > 20 || userGuess < 1) {
         dealerSpeak.innerText = `Please guess on a number between 1-20, ${playerName}`;
     }
-    checkGuess(playerName, userGuess);
+    checkGuess(playerName, userGuess, userTurn);
 }
 
-function checkGuess(playerName, userGuess) {
+function checkGuess(playerName, userGuess, userTurn) {
     const dealerSpeak = document.getElementById('higher-lower');
+    userTurn.innerText = `My guess is ${userGuess}`;
 
     if(dealtCard === userGuess) {
         console.log('You win!', userGuess)
@@ -285,7 +283,6 @@ function checkGuess(playerName, userGuess) {
         setUserWinsToLS();
         setBot1LossesToLS();
         setBot2LossesToLS();
-        console.log(playerWins);
         setTimeout(() => {
             userTurn.innerText = "";
             dealerSpeak.innerText = `${playerName} Wins!`

@@ -7,12 +7,6 @@ function main() {
     getPlayerStats();
     getBotOneStats();
     getBotTwoStats();
-
-
-
-
-  
-
 }
 
 function fetchUserFromLS() {

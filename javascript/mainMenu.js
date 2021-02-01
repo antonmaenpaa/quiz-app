@@ -1,5 +1,3 @@
-
-
 window.addEventListener('load', fetchUserAndBotsPoints);
 
 function fetchUserAndBotsPoints() {
@@ -16,13 +14,11 @@ function fetchUserAndBotsPoints() {
     const usernameInput = JSON.parse(localStorage.getItem("user"));
     const playerName = usernameInput.username;
     const user = localStorage.getItem(playerName);
-    console.log('user score: ' + user);
+    console.log(playerName + 's score: ' + user);
 
     checkWhosInFirstPlace(botOne, botTwo, user);
     checkWhosInSecondPlace(botOne, botTwo, user);
     checkWhosInThirdPlace(botOne, botTwo, user);
-
-
 }
 
 function checkWhosInFirstPlace(botOne, botTwo, user) {
@@ -34,7 +30,6 @@ function checkWhosInFirstPlace(botOne, botTwo, user) {
         img.src = './assets/player-win.svg';
         let userImgs = document.getElementById('first-p').appendChild(img);
         userImgs.classList.add('first-place-image');
-        console.log('user wins');
 
     } else if(botTwo > user && botTwo > botOne) {
 
@@ -43,8 +38,7 @@ function checkWhosInFirstPlace(botOne, botTwo, user) {
         img.src = './assets/bot2-win.svg';
         let userImgs = document.getElementById('first-p').appendChild(img);
         userImgs.classList.add('first-place-image');
-        console.log('Lilly wins');
-
+        
     } else if(botOne > user && botOne > botTwo) {
 
         // creates an img element and adds it to html
@@ -52,76 +46,54 @@ function checkWhosInFirstPlace(botOne, botTwo, user) {
         img.src = './assets/bot1-win.svg';
         let userImgs = document.getElementById('first-p').appendChild(img);
         userImgs.classList.add('first-place-image');
-        console.log('Frank wins');
     } 
-
 }    
 
 function checkWhosInSecondPlace(botOne, botTwo, user) {
 
     // Checks who is in second place
     if(botOne < user && botOne > botTwo || botOne > user && botOne < botTwo) {
-        
         let img = document.createElement('img');
         img.src = './assets/bot1-win.svg';
         let userImgs = document.getElementById('second-p').appendChild(img);
         userImgs.classList.add('second-place-image');
-        console.log('bot one second place');
-    
     }
     
     if(user < botOne && user > botTwo || user > botOne && user < botTwo) {
-    
         let img = document.createElement('img');
         img.src = './assets/player-win.svg';
         let userImgs = document.getElementById('second-p').appendChild(img);
         userImgs.classList.add('second-place-image');
-        // console.log('bot one second place');
-    
     }
     
     if(botTwo < botOne && botTwo > user || botTwo > botOne && botTwo < user) {
-    
         let img = document.createElement('img');
         img.src = './assets/bot2-win.svg';
         let userImgs = document.getElementById('second-p').appendChild(img);
-        userImgs.classList.add('second-place-image');
-        // console.log('bot one second place');
-    
+        userImgs.classList.add('second-place-image');    
     }
 }
 
 function checkWhosInThirdPlace(botOne, botTwo, user) {
-
-    // Checks who is in third place
     if(botOne < user && botOne < botTwo || botOne < user && botOne < botTwo) {
-    
         let img = document.createElement('img');
         img.src = './assets/bot1-win.svg';
         let userImgs = document.getElementById('third-p').appendChild(img);
         userImgs.classList.add('second-place-image');
-        console.log('bot one second place');
-
     }
 
     if(user < botOne && user < botTwo || user < botOne && user < botTwo) {
-
         let img = document.createElement('img');
         img.src = './assets/player-win.svg';
         let userImgs = document.getElementById('third-p').appendChild(img);
         userImgs.classList.add('second-place-image');
-        // console.log('bot one second place');
-
     }
 
     if(botTwo < botOne && botTwo < user || botTwo < botOne && botTwo < user) {
-
         let img = document.createElement('img');
         img.src = './assets/bot2-win.svg';
         let userImgs = document.getElementById('third-p').appendChild(img);
         userImgs.classList.add('second-place-image');
-        // console.log('bot one second place');
-
     }
 }
 
