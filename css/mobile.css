@@ -5,7 +5,9 @@
         /* game */
 
         /* stats */
-        section {
+        main {
             flex-direction: column;
         }
-}
+    }
+
+ 

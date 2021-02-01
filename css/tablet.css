@@ -1,5 +1,29 @@
 @media (max-width: 62em) {
 
+    /* stats page */
+    .profile-image {
+        width: 10rem;
+    }
 
-    
+    li {
+        font-size: 0.8rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h2,
+    li {
+        transition: font-size 2s;
+    }
+
+    ul {
+        padding-left: 0;
+    }
+
+    .profile-image {
+        transition: width 2s;
+    }
+
 }
