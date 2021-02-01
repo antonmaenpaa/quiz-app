@@ -111,6 +111,42 @@
     box-shadow: .3rem .2rem #FEACC9;
 }
 
+.first-place-number {
+    z-index: 1;
+    font-family: 'Noto Sans HK', sans-serif;
+    font-size: 3.5rem;
+    position: absolute;
+    top: -5%;
+    left: 0;
+    color: var(--black-color);
+    /* color: gold;
+    text-shadow: 2px 3px 1px var(--black-color); */
+}
+
+.second-place-number {
+    z-index: 1;
+    font-family: 'Noto Sans HK', sans-serif;
+    font-size: 3rem;
+    position: absolute;
+    top: -10%;
+    right: 0;
+    color: var(--black-color);
+    /* color: silver;
+    text-shadow: 2px 3px 1px var(--black-color); */
+}
+
+.third-place-number {
+    z-index: 1;
+    font-family: 'Noto Sans HK', sans-serif;
+    font-size: 2.5rem;
+    position: absolute;
+    top: -5%;
+    left: 0;
+    color: var(--black-color);
+    /* color: rgba(179, 72, 72, 0.762);
+    text-shadow: 2px 3px 1px var(--black-color); */
+}
+
 /* Second place */
 .second-place {
     position: absolute;

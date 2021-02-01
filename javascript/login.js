@@ -30,10 +30,4 @@ function loginDetails() {
         console.log('failed password')
         passwordInputField.classList.add('add-border-input');
     }
-        
-        
-        // const removeBorder = passwordInputField.classList.remove('add-border-input')
-        // setTimeout(() => {
-        //     removeBorder;
-        // }, 2000)
 }

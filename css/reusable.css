@@ -95,7 +95,7 @@ li {
 /* Logo */
 .logo {
     width: 80%;
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
 }
 
 /* Text */
@@ -145,7 +145,7 @@ h3 {
 }
 
 .grey-info-divider {
-    margin: 2rem 0;
+    margin: 1rem 0;
     width: 30%;
     border-top: .2rem solid rgb(185, 185, 185);
 }

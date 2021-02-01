@@ -1,13 +1,14 @@
-window.addEventListener('load', main);
+// window.addEventListener('load', main);
 
-function main() {
+// function main() {
     // loginEventListeners()
     // addEventListeners();
-    gamePlay();
+    // gamePlay();
     // registerEventListeners();
+    // fetchUserAndBotsPoints();
     // loginEventListeners();
     // gameEventListeners();
-}
+// }
 
 // function addEventListeners() {
 //     const startBtn = document.getElementById('start-btn');

@@ -137,12 +137,12 @@ input[type="number"] {
 }
 
 /* Text size */
+#higher-lower,
 #bot-one-turn,
 #bot-two-turn,
-#higher-lower,
 #user-turn,
 #count-down {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .aside-container {
