@@ -8,53 +8,135 @@
     height: 100vh;
 }
 
+/* Layout players */
 .all-players-container {
     width: 80%;
-    margin: 4rem auto 2rem auto;
+    margin: 2rem auto 2rem 3rem;
 }
 
 .player-container {
-    background-color: white;
     height: 25%;
-    margin-top: 3rem;
+    margin-top: 4rem;
+}
+
+.white-container {
+    background-color: white;
+    margin: 1rem 0 1rem -7rem;
     border-radius: .5rem;
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.25);
 }
 
 /* Player image */
 .player-image {
     background-color: white;
     border-radius: 50%;
-    box-shadow: 0 .4rem .1rem rgba(128, 128, 128, 0.239);
-    width: 15rem;
+    box-shadow: 0 .3rem .4rem rgba(0, 0, 0, 0.25);
+    height: 100%;
+    z-index: 100;
 }
 
 .add-border {
-    border: 5px solid #FFF;
-    box-shadow: 0 0 0 2px green;    
+    box-shadow: 0 0 0 .8rem var(--dark-green-color);   
 }
 
 /* Dealer image */
 .dealer-image {
-    width: 50%;
-    margin-top: 4rem;
+    width: 60%;
     margin-bottom: 2rem;
 }
 
-/* Bot answer */
-.bot-answer {
-    margin: 0 auto;
-}
-
+/* Score */
 .candy-container img {
+    margin-left: 9rem;
     width: 3rem;
-    height: 3rem;
 }
 
-.message {
-    margin-bottom: .1rem;
-    height: 3rem;
+.hide {
+    visibility: hidden;
 }
 
+/* Buttons */
+.submit-button {
+    width: 8rem;
+    padding: .3rem 0;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    color: white;
+    background-color: var(--dark-green-color);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.submit-button:hover {
+    width: 10rem;
+}
+
+.game-menu-button {
+    width: 10rem;
+    background-color: var(--pink-color);
+    color: #fff;
+    font-size: 1.3rem;
+    margin-top: .8rem;
+    padding: 0.5rem 0;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.game-menu-button:hover {
+    width: 12rem;
+}
+
+/* User input */
+.input-field {
+    outline: none;
+    width: 12rem;
+    height: 3rem;
+    padding: .3rem 0 .3rem .2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    border: .2rem solid rgb(204, 204, 204);
+    border-radius: .5rem; 
+
+}
+
+.border-input {
+    outline: none;
+    width: 12rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: .3rem 0 .3rem .2rem;
+    border: .2rem solid var(--pink-color);
+    border-radius: .5rem;  
+}
+
+/* Removes arrows (outer-/inner-spin buttons) from input field */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Timer */
+.timer {
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    border: .5rem solid rgba(128, 128, 128, 0.239);
+}
+
+/* Text size */
 #bot-one-turn,
 #bot-two-turn,
 #higher-lower,
@@ -63,63 +145,7 @@
     font-size: 2rem;
 }
 
-.timer {
-    margin-top: 8rem;
-    width: 12rem;
-    height: 12rem;
-    border-radius: 50%;
-    border: .5rem solid rgba(128, 128, 128, 0.239);
-}
-
-/* Buttons */
-.btn {
-    border: none;
-    background-color: var(--pink-color);
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-    margin: .3rem;
-    padding: 0.7rem 0rem;
-    outline: none;
-    width: 10rem;
-    transition: all 300ms ease;
-}
-
-.btn a {
-    color: #fff;
-}
-
-.btn:hover {
-    opacity: .9;
-    border-radius: 1.5rem;
-    width: 12rem;
-}
-
-/* Input */
-.user-input-block {
-    margin-top: 1rem;
-    padding: 1rem;
-}
-
-#user-value {
-    background-color: #fff;
-    color: var(--black-color);
-    font-size: 2rem;
-    width: 8rem;
-    display: block;
-    padding: 0.3rem;
-    outline: none;
-    border: 4px solid #ddd;
-}
-
-.border-input {
-    border: 0.5rem solid var(--pink-color);
-    outline: none;
-}
-
-/* Score, hide */
-.hide {
-    visibility: hidden;
+.aside-container {
+    width: 80%;
+    margin: 2rem auto 2rem auto;
 }
