@@ -1,34 +1,37 @@
-const modalActive = document.querySelector(".modal-active");
-const closeIcon = document.querySelector(".close");
+window.addEventListener("load", test);
 
-const allBotButtons = document.querySelectorAll("section#bot-container #bot-box button");
-
-for (let button of allBotButtons) {
-    button.addEventListener("click", () => {
-        displayModal(button);
+function test() {
+    if (innerWidth <= 992) {
+        console.log(innerWidth);
+        responsiveHandler();
+    } else {
+        const infoBtn = document.querySelector(".how-to-play-icon .info-btn");
+        const ruleContainer = document.querySelector(".rules-container");
+    
+        infoBtn.addEventListener("mouseover", () => {
+            ruleContainer.style.display = "block";
+        });
+        infoBtn.addEventListener("mouseout", () => {
+            ruleContainer.style.display = "none";
+        });
+    }
+}
+function responsiveHandler() {
+    const infoBtn = document.querySelector(".how-to-play-icon .info-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    const ruleContainer = document.querySelector(".rules-container");
+    
+    infoBtn.addEventListener("click", () => {
+        ruleContainer.style.display = "block";
+        cancelBtn.style.display = "block";  
+        infoBtn.style.display = "none";
     });
+    cancelBtn.addEventListener("click", () => {
+        ruleContainer.style.display = "none";
+        cancelBtn.style.display = "none";  
+        infoBtn.style.display = "block";
+    });
+
+    
 }
 
-function displayModal(button) {
-    modalActive.style.display = "block";
-
-    const botTitle = document.getElementById("bot-title");
-    botTitle.innerText = button.innerText;
-
-    const botDescription = document.querySelector("#bot-info");
-
-    if (button.innerText === "PIKACHU") {
-        botDescription.innerText = "Pokémon Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae odio inventore asperiores iste placeat fugit ipsam iusto vero laudantium quisquam.";
-    } 
-    if (button.innerText === "PETER") {
-        botDescription.innerText = "Family guy Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae odio inventore asperiores iste placeat fugit ipsam iusto vero laudantium quisquam.";
-    } 
-    if (button.innerText === "PINGU") {
-        botDescription.innerText = "Pingus värld Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae odio inventore asperiores iste placeat fugit ipsam iusto vero laudantium quisquam.";
-    } 
-
-}
-
-closeIcon.addEventListener("click", () => {
-    modalActive.style.display = "none";
-});

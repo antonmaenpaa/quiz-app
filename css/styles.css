@@ -182,3 +182,23 @@
     background-color: white;
     box-shadow: .3rem .2rem #9CD4A4;
 }
+
+/* Rule Modal */
+.rules-container {
+    display: none;
+    width: 25rem;
+    height: 10rem;
+    background: var(--black-color);
+    padding: 1rem;
+    position: absolute;
+    transition: all 300ms ease;
+}
+
+.rule-description {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.how-to-play-icon .cancel-btn {
+    display: none;
+}
