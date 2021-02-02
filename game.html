@@ -56,7 +56,7 @@
             <!-- Input field -->
             <div class="flex flex-1 column ycenter space-around">
               <p id="user-turn"></p>
-              <form id="form" class="flex column ycenter">
+              <form id="form" class="flex column ycenter hide-form">
                 <input id="user-input" class="input-field" type="number" required />
                 <input id="user-value" class="submit-button" type="submit" value="Check" />
               </form>
@@ -70,11 +70,13 @@
         <!-- Dealer -->
         <img id="dealer" class="dealer-image" src="./assets/dealer.svg" alt="Dealer" />
         <!-- Dealer feedback -->
+
         <div class="dealer-feedback flex ycenter column">
           <p id="higher-lower">Dealer</p>
           <div class="timer flex center">
             <p id="count-down"></p>
           </div>
+
         </div>
         <!-- Knappar -->
         <div class="game-buttons-container flex ycenter column">

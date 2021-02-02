@@ -11,8 +11,7 @@ console.log('Dealer card: ' + dealtCard);
 // An array with user and bots
 let whosTurn = ['user', 'botOne', 'botTwo'];
 
-
-// save wins to LS
+// Save wins to LS
 function setUserWinsToLS() {
     const usernameInput = JSON.parse(localStorage.getItem("user"));
     const playerName = usernameInput.username;
@@ -32,14 +31,13 @@ function setBot2WinsToLS() {
     localStorage.setItem('bot2Wins', bot2Wins);
 }
 
-
-// save losses to LS
+// Save losses to LS
 function setBot1LossesToLS() {
     bot1Losses = JSON.parse(localStorage.getItem('bot1Losses'));
     bot1Losses +=1;
     localStorage.setItem('bot1Losses', bot1Losses);
-    
 }
+
 function setBot2LossesToLS() {
     bot2Losses = JSON.parse(localStorage.getItem('bot2Losses'));
     bot2Losses +=1;
@@ -55,7 +53,7 @@ function setUserLossesToLS() {
     localStorage.setItem(playerName + ' losses', playerLosses);
 }
 
-// Global vars to hold wins/losses
+// Global variables to set wins/losses
 let playerWins;
 let bot1Wins;
 let bot2Wins;
@@ -85,7 +83,6 @@ function counter() {
     let interval = setInterval(() => {
         let timer = document.getElementById('count-down');
         timer.innerText = countDown--;
-
         if (countDown <= -1) {
             if (guessedRight) {
                 clearInterval(interval);
@@ -99,34 +96,65 @@ function counter() {
 }
 
 
-// function that pick a random bot or the user
+// Generates next turn randomly
 function generateRandomTurn(){
     counter();
-    // generates random value from whosTurn array
+    // Generates random value from whosTurn array
     let random = Math.floor(Math.random() * whosTurn.length)
-
+    const userValue = document.getElementById('form');
+    const userInput = document.getElementById('user-input');
     // if it's 'user' turn it call on getUserInput function
     if (whosTurn[random] == 'user'){
-        const userInput = document.getElementById('user-input');
         userInput.classList.add('border-input');
+        userValue.classList.remove('hide-form');
         getUserInput();
 
     // if it's 'botOne' turn it call on getbotOneInput function
     } else if ( whosTurn[random] == 'botOne'){
-        const userInput = document.getElementById('user-input');
-        userInput.classList.remove('border-input');
+        userValue.classList.add('hide-form');
         getBotOneInput();
     
     // if it's 'botTwo' turn, it call on getBotTwoInput function
     } else if (whosTurn[random] == 'botTwo'){
-        const userInput = document.getElementById('user-input');
-        userInput.classList.remove('border-input');
+        userValue.classList.add('hide-form');
         getBotTwoInput();
     }
 }
 
-// logic for bot one, compare with dealer random number
+// Logic for bot one, compare with dealers random number
 function getBotOneInput() {
+    let bot1GuessAlt = ['One', 'Two', 'Three', 'Four', 'Five'];
+    let randomizeBot1Guess = Math.floor(Math.random() * bot1GuessAlt.length);
+    let randomNumberbotOne = randomizeBot1Guess;
+    // Check which guessing index Bot1 gets
+    if (randomizeBot1Guess === 0) {
+        randomNumberbotOne = dealtCard - 2;
+        if (randomNumberbotOne <= 1) {
+            randomNumberbotOne = 1;
+        }
+    }
+    if (randomizeBot1Guess === 1) {
+        randomNumberbotOne = dealtCard - 1;
+        if (randomNumberbotOne <= 1) {
+            randomNumberbotOne = 1;
+        }
+    }
+    if (randomizeBot1Guess === 2) {
+        randomNumberbotOne = dealtCard;
+    }
+    if (randomizeBot1Guess === 3) {
+        randomNumberbotOne = dealtCard + 1;
+        if(randomNumberbotOne >= 20) {
+            randomNumberbotOne = 20;
+        }
+    }
+    if (randomizeBot1Guess === 4) {
+        randomNumberbotOne = dealtCard + 2;
+        if(randomNumberbotOne >= 20) {
+            randomNumberbotOne = 20;
+        }
+    }
+
     const dealerSpeak = document.getElementById('higher-lower');
     dealerSpeak.innerHTML = '';
     const userTurn = document.getElementById("user-turn");
@@ -134,12 +162,8 @@ function getBotOneInput() {
     const botTwoPTag = document.getElementById('bot-two-turn')
     const botOnePTag = document.getElementById('bot-one-turn')
     botOnePTag.innerText = 'Franks turn';
-
-    const randomNumberbotOne = dealtCard;
-    //Math.floor(Math.random() * 20 + 1); 
     
-    console.log('bot-one', randomNumberbotOne)
-    
+    // Check if Bot1 guess the right number
     if (dealtCard === randomNumberbotOne) {
         setTimeout(() => {
             botOnePTag.innerText = 'My guess is: ' + randomNumberbotOne;
@@ -147,11 +171,12 @@ function getBotOneInput() {
                 dealerSpeak.innerText = 'Frank Wins!'
                 const candy = document.getElementById('bot-one-img');
                 candy.classList.remove('hide');
+                setTimeout(() => {
+                    dealerSpeak.innerText = `Play Again?`;
+                }, 3000);
             }, 2000);
         }, 3000);
-        // adds candy when bot one wins round
 
-        
         userTurn.innerText = "";
         botTwoPTag.innerText = "";
         setBot1WinsToLS();
@@ -182,8 +207,41 @@ function getBotOneInput() {
     }
 }
 
-// logic for bot two, compare with dealer random number
+// Logic for bot two, compare with dealers random number
 function getBotTwoInput() {
+    let bot2GuessAlt = ['One', 'Two', 'Three', 'Four', 'Five'];
+    let randomizeBot2Guess = Math.floor(Math.random() * bot2GuessAlt.length);
+    console.log('Bot 2 guesses array:',randomizeBot2Guess);
+    let randomNumberbotTwo = randomizeBot2Guess;
+    // Check which guessing index Bot2 gets
+    if (randomizeBot2Guess === 0) {
+        randomNumberbotTwo = dealtCard - 4;
+        if(randomNumberbotTwo <= 1) {
+            randomNumberbotTwo = 1;
+        }
+    }
+    if (randomizeBot2Guess === 1) {
+        randomNumberbotTwo = dealtCard - 2;
+        if(randomNumberbotTwo <= 1) {
+            randomNumberbotTwo = 1;
+        }
+    }
+    if (randomizeBot2Guess === 2) {
+        randomNumberbotTwo = dealtCard;
+    }
+    if (randomizeBot2Guess === 3) {
+        randomNumberbotTwo = dealtCard + 2;
+        if (randomNumberbotTwo >= 20) {
+            randomNumberbotTwo = 20;
+        }
+    }
+    if (randomizeBot2Guess === 4) {
+        randomNumberbotTwo = dealtCard + 4;
+        if (randomNumberbotTwo >= 20) {
+            randomNumberbotTwo = 20;
+        }
+    }
+
     const dealerSpeak = document.getElementById('higher-lower');
     dealerSpeak.innerHTML = '';
     const userTurn = document.getElementById("user-turn");
@@ -191,21 +249,19 @@ function getBotTwoInput() {
     const botOnePTag = document.getElementById('bot-one-turn')
     const botTwoPTag = document.getElementById('bot-two-turn')
     botTwoPTag.innerText = 'Lillys turn';
+    console.log('bot-two guess:', randomNumberbotTwo)
 
-    const randomNumberbotTwo = dealtCard;
-    //Math.floor(Math.random() * 20 + 1)
-
-    console.log('bot-two', randomNumberbotTwo)
-
+    // Check if Bot2 guess the right number
     if (dealtCard === randomNumberbotTwo) {
-
-        // adds candy when bot two wins round
         setTimeout(() => {
             botTwoPTag.innerText = 'My guess is: ' + randomNumberbotTwo;
             setTimeout(() => {
                 dealerSpeak.innerText = 'Lilly Wins!';
                 const candyBotTwo = document.getElementById('bot-two-img');
                 candyBotTwo.classList.remove('hide');
+                setTimeout(() => {
+                    dealerSpeak.innerText = `Play Again?`;
+                }, 3000);
             }, 2000);
         }, 3000);
         userTurn.innerText = "";
@@ -239,7 +295,10 @@ function getBotTwoInput() {
     }
 }
 
+
 function getUserInput() {
+    const userValue = document.getElementById('form');
+    userValue.reset();
     const dealerSpeak = document.getElementById('higher-lower');
     dealerSpeak.innerText = "";
 
@@ -253,9 +312,11 @@ function getUserInput() {
     const userTurn = document.getElementById("user-turn");
     userTurn.innerText = `${playerName}'s turn`;
     
+    // Sumbmit user guess
     const userForm = document.getElementById('form');
     userForm.addEventListener('submit', (e) => {
         e.preventDefault();
+        userValue.classList.add('hide-form');
         fetchUserInput(playerName, userTurn);
     })
 }
@@ -263,6 +324,7 @@ function getUserInput() {
 function fetchUserInput(playerName, userTurn) {
     const userInput = document.getElementById('user-input');
     const userGuess = Number(userInput.value);
+    // Validate user guess
     if (userGuess > 20 || userGuess < 1) {
         dealerSpeak.innerText = `Please guess on a number between 1-20, ${playerName}`;
     }
@@ -272,7 +334,7 @@ function fetchUserInput(playerName, userTurn) {
 function checkGuess(playerName, userGuess, userTurn) {
     const dealerSpeak = document.getElementById('higher-lower');
     userTurn.innerText = `My guess is ${userGuess}`;
-
+    // Check if Bot2 guess the right number
     if(dealtCard === userGuess) {
         console.log('You win!', userGuess)
         const userTurn = document.getElementById("user-turn");
@@ -289,9 +351,9 @@ function checkGuess(playerName, userGuess, userTurn) {
             setTimeout(() => {
                 let candyUser = document.getElementById('user-img');
                 candyUser.classList.remove('hide');
+                dealerSpeak.innerText = `Play Again?`;
             }, 2000)
         }, 3000);
-
         guessedRight = true;
     } 
     else if(dealtCard < userGuess) {
@@ -307,11 +369,3 @@ function checkGuess(playerName, userGuess, userTurn) {
         console.log('Dealer: Higher');
     }
 }
-
-
-
-// Bot-1's guessing function   
-
-// Bot-2's guessing function
-
-// Bot-3's guessing function 

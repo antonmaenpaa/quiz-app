@@ -59,6 +59,10 @@
     visibility: hidden;
 }
 
+.hide-form {
+    display: none;
+}
+
 /* Buttons */
 .submit-button {
     width: 8rem;
@@ -96,17 +100,6 @@
     width: 12rem;
 }
 
-/* User input - Kan ta bort 'input-field' klassen när input endast visas när det är spelarens tur */
-.input-field {
-    outline: none;
-    width: 12rem;
-    height: 3rem;
-    padding: .3rem 0 .3rem .2rem;
-    font-size: 1.5rem;
-    text-align: center;
-    border: .2rem solid rgb(204, 204, 204);
-    border-radius: .5rem; 
-}
 
 .border-input {
     outline: none;
