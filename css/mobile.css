@@ -35,10 +35,6 @@
     .stats-main-container {
         flex-direction: column;
     }
-    
-    .secondary-button {
-        width: 60%;
-    }
 
     .sign-out-button {
         width: 40%;

@@ -9,7 +9,7 @@ let dealtCard = Math.floor(Math.random()* 20) + 1;
 console.log('Dealer card: ' + dealtCard);
 
 // An array with user and bots
-let whosTurn = ['user', 'botOne', 'botTwo'];
+let whosTurn = ['user', 'botTwo', 'botOne'];
 
 // Save wins to LS
 function setUserWinsToLS() {
@@ -65,7 +65,8 @@ let bot2Losses;
 function startGame() {
     const startGame = document.getElementById('start-button');
     startGame.addEventListener('click', () => {
-        nextTurn();
+        // nextTurn();
+        generateRandomFirstTurn()
     })
 }
 
@@ -95,24 +96,13 @@ function counter() {
     }, 1000);
 }
 
-// the length of woshTurn array = 2
-let random = Math.floor(whosTurn.length);
-
-//sets array turn to 0
-random = 0;
-
-// Generates next turn 
-function nextTurn(){
+function generateRandomFirstTurn() {
+    const startGame = document.getElementById('start-button');
+    const playAgain = document.getElementById('playAgain-button');
+    startGame.classList.add('start-button-hide');
+    playAgain.classList.add('play-again-button-hide');
     counter();
-   
-    
-    if(random === 2){
-        random = 0;
-    } else {
-        random +=1;
-    }
-    
-    // console.log(random)
+    let random = Math.floor(Math.random() * whosTurn.length);
     const userValue = document.getElementById('form');
     const userInput = document.getElementById('user-input');
     // if it's 'user' turn it call on getUserInput function
@@ -120,12 +110,10 @@ function nextTurn(){
         userInput.classList.add('border-input');
         userValue.classList.remove('hide-form');
         getUserInput();
-
     // if it's 'botOne' turn it call on getbotOneInput function
     } else if ( whosTurn[random] == 'botOne'){
         userValue.classList.add('hide-form');
         getBotOneInput();
-    
     // if it's 'botTwo' turn, it call on getBotTwoInput function
     } else if (whosTurn[random] == 'botTwo'){
         userValue.classList.add('hide-form');
@@ -133,7 +121,42 @@ function nextTurn(){
     }
 }
 
-// Logic for bot one, compare with dealers random number
+// the length of woshTurn array = 2
+let turn = Math.floor(whosTurn.length);
+
+//sets array turn to 0
+turn = 0;
+
+// Generates next turn 
+function nextTurn(){
+    counter();
+    if(turn === 2){
+        turn = 0;
+    } else {
+        turn +=1;
+    }
+    
+    const userValue = document.getElementById('form');
+    const userInput = document.getElementById('user-input');
+    // if it's 'user' turn it call on getUserInput function
+    if (whosTurn[turn] == 'user'){
+        userInput.classList.add('border-input');
+        userValue.classList.remove('hide-form');
+        getUserInput();
+
+    // if it's 'botOne' turn it call on getbotOneInput function
+    } else if ( whosTurn[turn] == 'botOne'){
+        userValue.classList.add('hide-form');
+        getBotOneInput();
+    
+    // if it's 'botTwo' turn, it call on getBotTwoInput function
+    } else if (whosTurn[turn] == 'botTwo'){
+        userValue.classList.add('hide-form');
+        getBotTwoInput();
+    }
+}
+
+// Logic for bot one, compare with dealers turn number
 function getBotOneInput() {
     let bot1GuessAlt = ['One', 'Two', 'Three', 'Four', 'Five'];
     let randomizeBot1Guess = Math.floor(Math.random() * bot1GuessAlt.length);
@@ -187,6 +210,8 @@ function getBotOneInput() {
                     dealerSpeak.innerText = `Play Again?`;
                 }, 3000);
             }, 2000);
+            const playAgain = document.getElementById('playAgain-button');
+            playAgain.classList.remove('play-again-button-hide');
         }, 3000);
 
         userTurn.innerText = "";
@@ -219,7 +244,7 @@ function getBotOneInput() {
     }
 }
 
-// Logic for bot two, compare with dealers random number
+// Logic for bot two, compare with dealers turn number
 function getBotTwoInput() {
     let bot2GuessAlt = ['One', 'Two', 'Three', 'Four', 'Five'];
     let randomizeBot2Guess = Math.floor(Math.random() * bot2GuessAlt.length);
@@ -275,6 +300,8 @@ function getBotTwoInput() {
                     dealerSpeak.innerText = `Play Again?`;
                 }, 3000);
             }, 2000);
+            const playAgain = document.getElementById('playAgain-button');
+            playAgain.classList.remove('play-again-button-hide');
         }, 3000);
         userTurn.innerText = "";
         botOnePTag.innerText = "";
@@ -337,6 +364,7 @@ function fetchUserInput(playerName, userTurn) {
     const userInput = document.getElementById('user-input');
     const userGuess = Number(userInput.value);
     // Validate user guess
+    const dealerSpeak = document.getElementById('higher-lower');
     if (userGuess > 20 || userGuess < 1) {
         dealerSpeak.innerText = `Please guess on a number between 1-20, ${playerName}`;
     }
@@ -366,6 +394,8 @@ function checkGuess(playerName, userGuess, userTurn) {
                 dealerSpeak.innerText = `Play Again?`;
             }, 2000)
         }, 3000);
+        const playAgain = document.getElementById('playAgain-button');
+        playAgain.classList.remove('play-again-button-hide');
         guessedRight = true;
     } 
     else if(dealtCard < userGuess) {
