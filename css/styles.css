@@ -34,7 +34,6 @@
     font-size: 1.5rem;
     text-align: center;
     color: white;
-    transition: .3s ease;
 }
 
 /* Start button */
@@ -42,6 +41,7 @@
     padding: .8rem;
     min-width: 30%;
     background-color: var(--dark-blue-color);
+    transition: .3s ease-in-out;
 }
 
 .primary-button:hover {
@@ -54,6 +54,7 @@
     padding: .5rem;
     min-width: 20%;
     background-color: var(--dark-pink-color);
+    transition: .3s ease-in-out;
 }
 
 .secondary-button:hover {
@@ -70,6 +71,7 @@
     border: .2rem solid var(--black-color);
     color: var(--black-color);
     font-size: 1.2rem;
+    transition: .3s ease-in-out;
 }
 
 .sign-out-button:hover {
@@ -119,8 +121,6 @@
     top: -5%;
     left: 0;
     color: var(--black-color);
-    /* color: gold;
-    text-shadow: 2px 3px 1px var(--black-color); */
 }
 
 .second-place-number {
@@ -131,8 +131,6 @@
     top: -10%;
     right: 0;
     color: var(--black-color);
-    /* color: silver;
-    text-shadow: 2px 3px 1px var(--black-color); */
 }
 
 .third-place-number {
@@ -143,8 +141,6 @@
     top: -5%;
     left: 0;
     color: var(--black-color);
-    /* color: rgba(179, 72, 72, 0.762);
-    text-shadow: 2px 3px 1px var(--black-color); */
 }
 
 /* Second place */
@@ -186,8 +182,7 @@
 /* Rule Modal */
 .rules-container {
     display: none;
-    width: 25rem;
-    height: 10rem;
+    width: 20rem;
     background: var(--black-color);
     padding: 1rem;
     position: absolute;
@@ -197,6 +192,7 @@
 .rule-description {
     color: #fff;
     font-size: 0.9rem;
+    text-align: justify;
 }
 
 .how-to-play-icon .cancel-btn {

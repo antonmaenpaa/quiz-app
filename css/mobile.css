@@ -2,7 +2,7 @@
 
     /* INDEX - Main menu */
     .main-menu-bg {
-    display: none;
+        display: none;
     }
 
     /* Start button */
@@ -10,16 +10,12 @@
         width: 80%;
     }
 
-    /* stats */
-    section {
-        flex-direction: column;
-    }
-    /* Register / Login */
+    /* REGISTER / LOGIN */
     .login-container {
         width: 100%;
     }
 
-    /* stats */
+    /* STATS */
     .stats-main-container {
         flex-direction: column;
     }
@@ -40,7 +36,7 @@
     /* Layout players */
     .all-players-container {
         width: 90%;
-       margin: 2.5rem auto 0 auto;  
+        margin: 2.5rem auto 0 auto;  
     }
 
     .player-container {
@@ -126,10 +122,5 @@
     #user-turn,
     #count-down {
         font-size: 1rem;
-    }
-
-    /* STATS */
-    section {
-        flex-direction: column;
     }
 }

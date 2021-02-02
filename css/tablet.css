@@ -1,12 +1,12 @@
 
 @media (max-width: 80em) {
-/* Register / Login */    
+/* REGISTER / LOGIN */    
     .login-bg {
         display: none;
     }
     .login-container {
         width: 50%;
-        margin: auto;
+        margin: 4rem auto;
     }
     .logo {
         width: 70%;
@@ -20,8 +20,17 @@
         font-size: 2rem;
     }
 
+    /* Start button */
+    .primary-button {
+        min-width: 50%;
+    }
 
-    /* stats page */
+    /* Stats button */
+    .secondary-button {
+        min-width: 40%;
+    }
+
+    /* STATS */
     .profile-image {
         width: 10rem;
     }
@@ -46,17 +55,6 @@
     .profile-image {
         transition: width 2s;
     }
-
-
-    /* Start button */
-    .primary-button {
-        min-width: 50%;
-    }
-
-    .secondary-button {
-        min-width: 40%;
-    }
-
 
     /* GAME */
     .responsive-layout-game {
