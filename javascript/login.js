@@ -18,6 +18,8 @@ function loginDetails() {
 
     if (username === registeredUser.username && password === registeredUser.password) {
         location.href = "./index.html"
+        passwordInputField.classList.remove('add-border-input');
+        usernameInputField.classList.remove('add-border-input');
     } else if (username === "" && password === "") {
         passwordInputField.classList.add('add-border-input');
         usernameInputField.classList.add('add-border-input');

@@ -28,6 +28,9 @@ function registrationDetails() {
         regPassword.classList.add('add-border-input');
         regPassword2.classList.add('add-border-input');
     } else {
+        regUsername.classList.remove('add-border-input');
+        regPassword.classList.remove('add-border-input');
+        regPassword2.classList.remove('add-border-input');
         const userObj = {
             username: regUsername.value,
             password: regPassword.value,
