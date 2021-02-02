@@ -97,29 +97,28 @@ function counter() {
 }
 
 function generateRandomFirstTurn() {
+    const startGame = document.getElementById('start-button');
+    const playAgain = document.getElementById('playAgain-button');
+    startGame.classList.add('start-button-hide');
+    playAgain.classList.add('play-again-button-hide');
     counter();
     let random = Math.floor(Math.random() * whosTurn.length);
-        // console.log(turn)
-        const userValue = document.getElementById('form');
-        const userInput = document.getElementById('user-input');
-        // if it's 'user' turn it call on getUserInput function
-        if (whosTurn[random] == 'user'){
-            userInput.classList.add('border-input');
-            userValue.classList.remove('hide-form');
-            getUserInput();
-    
-        // if it's 'botOne' turn it call on getbotOneInput function
-        } else if ( whosTurn[random] == 'botOne'){
-            userValue.classList.add('hide-form');
-            getBotOneInput();
-        
-        // if it's 'botTwo' turn, it call on getBotTwoInput function
-        } else if (whosTurn[random] == 'botTwo'){
-            userValue.classList.add('hide-form');
-            getBotTwoInput();
-        }
-    
-
+    const userValue = document.getElementById('form');
+    const userInput = document.getElementById('user-input');
+    // if it's 'user' turn it call on getUserInput function
+    if (whosTurn[random] == 'user'){
+        userInput.classList.add('border-input');
+        userValue.classList.remove('hide-form');
+        getUserInput();
+    // if it's 'botOne' turn it call on getbotOneInput function
+    } else if ( whosTurn[random] == 'botOne'){
+        userValue.classList.add('hide-form');
+        getBotOneInput();
+    // if it's 'botTwo' turn, it call on getBotTwoInput function
+    } else if (whosTurn[random] == 'botTwo'){
+        userValue.classList.add('hide-form');
+        getBotTwoInput();
+    }
 }
 
 // the length of woshTurn array = 2
@@ -130,21 +129,13 @@ turn = 0;
 
 // Generates next turn 
 function nextTurn(){
-    // Hides buttons on gameplay screen when playing
-    const startGame = document.getElementById('start-button');
-    const playAgain = document.getElementById('playAgain-button');
-    startGame.classList.add('start-button-hide');
-    playAgain.classList.add('play-again-button-hide');
     counter();
-   
-    
     if(turn === 2){
         turn = 0;
     } else {
         turn +=1;
     }
     
-    // console.log(turn)
     const userValue = document.getElementById('form');
     const userInput = document.getElementById('user-input');
     // if it's 'user' turn it call on getUserInput function
