@@ -30,6 +30,11 @@
         min-width: 40%;
     }
 
+    /* How to play */
+    .rules-container {
+        width: 45%;
+    }
+
     /* STATS */
     .profile-image {
         width: 10rem;

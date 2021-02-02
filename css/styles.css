@@ -179,20 +179,30 @@
     box-shadow: .3rem .2rem #9CD4A4;
 }
 
-/* Rule Modal */
+/* How to play */
 .rules-container {
-    display: none;
-    width: 20rem;
-    background: var(--black-color);
-    padding: 1rem;
     position: absolute;
+    z-index: 100;
+    bottom: 0;
+    display: none;
+    width: 30%;
+    height: 50%;
+    background: white;
     transition: all 300ms ease;
 }
 
-.rule-description {
-    color: #fff;
-    font-size: 0.9rem;
-    text-align: justify;
+.rule {
+    text-align: center;
+}
+
+.rule h2 {
+    color: var(--dark-blue-color);
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+.rule p {
+    font-size: 1.2rem;
 }
 
 .how-to-play-icon .cancel-btn {

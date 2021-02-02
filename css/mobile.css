@@ -5,6 +5,27 @@
         display: none;
     }
 
+    /* Start button */
+    .primary-button {
+        width: 80%;
+    }
+
+    /* How to play */
+    .rules-container {
+        width: 80%;
+        height: 60%;
+    }
+
+    .rule h2 {
+        color: var(--dark-blue-color);
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+    
+    .rule p {
+        font-size: 1rem;
+    }
+
     /* REGISTER / LOGIN */
     .login-container {
         width: 100%;
