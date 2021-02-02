@@ -20,7 +20,7 @@
     }
 
     /* stats */
-    main {
+    .stats-main-container {
         flex-direction: column;
     }
     
