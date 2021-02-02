@@ -9,7 +9,7 @@ let dealtCard = Math.floor(Math.random()* 20) + 1;
 console.log('Dealer card: ' + dealtCard);
 
 // An array with user and bots
-let whosTurn = ['user', 'botOne', 'botTwo'];
+let whosTurn = ['user', 'botTwo', 'botOne'];
 
 // Save wins to LS
 function setUserWinsToLS() {
@@ -65,7 +65,8 @@ let bot2Losses;
 function startGame() {
     const startGame = document.getElementById('start-button');
     startGame.addEventListener('click', () => {
-        nextTurn();
+        // nextTurn();
+        generateRandomFirstTurn()
     })
 }
 
@@ -95,45 +96,71 @@ function counter() {
     }, 1000);
 }
 
+function generateRandomFirstTurn() {
+    counter();
+    let random = Math.floor(Math.random() * whosTurn.length);
+        // console.log(turn)
+        const userValue = document.getElementById('form');
+        const userInput = document.getElementById('user-input');
+        // if it's 'user' turn it call on getUserInput function
+        if (whosTurn[random] == 'user'){
+            userInput.classList.add('border-input');
+            userValue.classList.remove('hide-form');
+            getUserInput();
+    
+        // if it's 'botOne' turn it call on getbotOneInput function
+        } else if ( whosTurn[random] == 'botOne'){
+            userValue.classList.add('hide-form');
+            getBotOneInput();
+        
+        // if it's 'botTwo' turn, it call on getBotTwoInput function
+        } else if (whosTurn[random] == 'botTwo'){
+            userValue.classList.add('hide-form');
+            getBotTwoInput();
+        }
+    
+
+}
+
 // the length of woshTurn array = 2
-let random = Math.floor(whosTurn.length);
+let turn = Math.floor(whosTurn.length);
 
 //sets array turn to 0
-random = 0;
+turn = 0;
 
 // Generates next turn 
 function nextTurn(){
     counter();
    
     
-    if(random === 2){
-        random = 0;
+    if(turn === 2){
+        turn = 0;
     } else {
-        random +=1;
+        turn +=1;
     }
     
-    // console.log(random)
+    // console.log(turn)
     const userValue = document.getElementById('form');
     const userInput = document.getElementById('user-input');
     // if it's 'user' turn it call on getUserInput function
-    if (whosTurn[random] == 'user'){
+    if (whosTurn[turn] == 'user'){
         userInput.classList.add('border-input');
         userValue.classList.remove('hide-form');
         getUserInput();
 
     // if it's 'botOne' turn it call on getbotOneInput function
-    } else if ( whosTurn[random] == 'botOne'){
+    } else if ( whosTurn[turn] == 'botOne'){
         userValue.classList.add('hide-form');
         getBotOneInput();
     
     // if it's 'botTwo' turn, it call on getBotTwoInput function
-    } else if (whosTurn[random] == 'botTwo'){
+    } else if (whosTurn[turn] == 'botTwo'){
         userValue.classList.add('hide-form');
         getBotTwoInput();
     }
 }
 
-// Logic for bot one, compare with dealers random number
+// Logic for bot one, compare with dealers turn number
 function getBotOneInput() {
     let bot1GuessAlt = ['One', 'Two', 'Three', 'Four', 'Five'];
     let randomizeBot1Guess = Math.floor(Math.random() * bot1GuessAlt.length);
@@ -219,7 +246,7 @@ function getBotOneInput() {
     }
 }
 
-// Logic for bot two, compare with dealers random number
+// Logic for bot two, compare with dealers turn number
 function getBotTwoInput() {
     let bot2GuessAlt = ['One', 'Two', 'Three', 'Four', 'Five'];
     let randomizeBot2Guess = Math.floor(Math.random() * bot2GuessAlt.length);
