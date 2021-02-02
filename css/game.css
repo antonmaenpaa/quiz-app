@@ -7,6 +7,11 @@
     height: 100vh;
 }
 
+/* Responsive - Media Queries */
+.responsive-layout-game {
+    display: flex;
+}
+
 /* Layout players */
 .all-players-container {
     width: 80%;
@@ -94,6 +99,7 @@
 .game-menu-button:hover {
     width: 12rem;
 }
+
 
 .border-input {
     outline: none;
