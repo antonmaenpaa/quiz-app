@@ -103,6 +103,11 @@ random = 0;
 
 // Generates next turn 
 function nextTurn(){
+    // Hides buttons on gameplay screen when playing
+    const startGame = document.getElementById('start-button');
+    const playAgain = document.getElementById('playAgain-button');
+    startGame.classList.add('start-button-hide');
+    playAgain.classList.add('play-again-button-hide');
     counter();
    
     
@@ -187,6 +192,8 @@ function getBotOneInput() {
                     dealerSpeak.innerText = `Play Again?`;
                 }, 3000);
             }, 2000);
+            const playAgain = document.getElementById('playAgain-button');
+            playAgain.classList.remove('play-again-button-hide');
         }, 3000);
 
         userTurn.innerText = "";
@@ -275,6 +282,8 @@ function getBotTwoInput() {
                     dealerSpeak.innerText = `Play Again?`;
                 }, 3000);
             }, 2000);
+            const playAgain = document.getElementById('playAgain-button');
+            playAgain.classList.remove('play-again-button-hide');
         }, 3000);
         userTurn.innerText = "";
         botOnePTag.innerText = "";
@@ -337,6 +346,7 @@ function fetchUserInput(playerName, userTurn) {
     const userInput = document.getElementById('user-input');
     const userGuess = Number(userInput.value);
     // Validate user guess
+    const dealerSpeak = document.getElementById('higher-lower');
     if (userGuess > 20 || userGuess < 1) {
         dealerSpeak.innerText = `Please guess on a number between 1-20, ${playerName}`;
     }
@@ -366,6 +376,8 @@ function checkGuess(playerName, userGuess, userTurn) {
                 dealerSpeak.innerText = `Play Again?`;
             }, 2000)
         }, 3000);
+        const playAgain = document.getElementById('playAgain-button');
+        playAgain.classList.remove('play-again-button-hide');
         guessedRight = true;
     } 
     else if(dealtCard < userGuess) {
