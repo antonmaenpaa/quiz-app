@@ -65,7 +65,7 @@ let bot2Losses;
 function startGame() {
     const startGame = document.getElementById('start-button');
     startGame.addEventListener('click', () => {
-        generateRandomTurn();
+        nextTurn();
     })
 }
 
@@ -89,18 +89,30 @@ function counter() {
                 playAgain();
             } else {
                 clearInterval(interval);
-                generateRandomTurn();
+                nextTurn();
             }
         }
     }, 1000);
 }
 
+// the length of woshTurn array = 2
+let random = Math.floor(whosTurn.length);
 
-// Generates next turn randomly
-function generateRandomTurn(){
+//sets array turn to 0
+random = 0;
+
+// Generates next turn 
+function nextTurn(){
     counter();
-    // Generates random value from whosTurn array
-    let random = Math.floor(Math.random() * whosTurn.length)
+   
+    
+    if(random === 2){
+        random = 0;
+    } else {
+        random +=1;
+    }
+    
+    // console.log(random)
     const userValue = document.getElementById('form');
     const userInput = document.getElementById('user-input');
     // if it's 'user' turn it call on getUserInput function
@@ -249,7 +261,7 @@ function getBotTwoInput() {
     const botOnePTag = document.getElementById('bot-one-turn')
     const botTwoPTag = document.getElementById('bot-two-turn')
     botTwoPTag.innerText = 'Lillys turn';
-    console.log('bot-two guess:', randomNumberbotTwo)
+    // console.log('bot-two guess:', randomNumberbotTwo)
 
     // Check if Bot2 guess the right number
     if (dealtCard === randomNumberbotTwo) {
