@@ -50,7 +50,6 @@ function checkWhosInFirstPlace(botOne, botTwo, user) {
 }    
 
 function checkWhosInSecondPlace(botOne, botTwo, user) {
-
     // Checks who is in second place
     if(botOne < user && botOne > botTwo || botOne > user && botOne < botTwo) {
         let img = document.createElement('img');
@@ -96,9 +95,3 @@ function checkWhosInThirdPlace(botOne, botTwo, user) {
         userImgs.classList.add('third-place-image');
     }
 }
-
-
-
-
-
-

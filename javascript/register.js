@@ -1,12 +1,10 @@
 window.addEventListener('load', registerEventListeners);
 
 function registerEventListeners() {
-    const registerForm = document.getElementById('registerForm');
     const registrationBtn = document.getElementById('registrationBtn');
     registrationBtn.addEventListener('click', () => {
         registrationDetails();
-        
-    })
+    });
 }
 
 function registrationDetails() {
@@ -36,8 +34,7 @@ function registrationDetails() {
             password: regPassword.value,
         };
         saveRegisteredUser(userObj);
-        location.href = "./login.html"        
-        console.log(userObj);
+        location.href = "./login.html";
     }
 }
 

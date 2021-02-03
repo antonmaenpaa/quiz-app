@@ -1,4 +1,3 @@
-
 function getPlayerStats() {
 
   anychart.onDocumentReady(function() {

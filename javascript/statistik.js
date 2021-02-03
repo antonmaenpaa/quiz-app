@@ -1,7 +1,5 @@
 window.addEventListener("load", main);
 
-
-
 function main() {
     fetchUserFromLS();
     getPlayerStats();

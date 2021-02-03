@@ -1,11 +1,10 @@
 window.addEventListener('load', loginEventListeners);
 
 function loginEventListeners() {
-    const userDetailsForm = document.getElementById('userDetailsForm');
     const submitBtn = document.getElementById('submitBtn');
     submitBtn.addEventListener('click', () => {
         loginDetails();
-    })
+    });
 }
 
 function loginDetails() {
@@ -25,11 +24,9 @@ function loginDetails() {
         usernameInputField.classList.add('add-border-input');
 
     } else if(username !== registeredUser.username) {
-        console.log('failed username')
         usernameInputField.classList.add('add-border-input');
 
     } else if(password !== registeredUser.password) {
-        console.log('failed password')
         passwordInputField.classList.add('add-border-input');
     }
 }

@@ -1,8 +1,7 @@
-window.addEventListener("load", test);
+window.addEventListener("load", checkIfTablet);
 
-function test() {
+function checkIfTablet() {
     if (innerWidth <= 992) {
-        console.log(innerWidth);
         responsiveHandler();
     } else {
         const infoBtn = document.querySelector(".how-to-play-icon .info-btn");
@@ -16,6 +15,7 @@ function test() {
         });
     }
 }
+
 function responsiveHandler() {
     const infoBtn = document.querySelector(".how-to-play-icon .info-btn");
     const cancelBtn = document.querySelector(".cancel-btn");
@@ -30,8 +30,5 @@ function responsiveHandler() {
         ruleContainer.style.display = "none";
         cancelBtn.style.display = "none";  
         infoBtn.style.display = "block";
-    });
-
-    
+    });   
 }
-
