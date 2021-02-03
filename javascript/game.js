@@ -135,8 +135,7 @@ function getBotOneInput() {
     const botOnePTag = document.getElementById('bot-one-turn')
     botOnePTag.innerText = 'Franks turn';
 
-    const randomNumberbotOne = dealtCard;
-    //Math.floor(Math.random() * 20 + 1); 
+    const randomNumberbotOne = Math.floor(Math.random() * 20 + 1); 
     
     console.log('bot-one', randomNumberbotOne)
     
@@ -192,8 +191,7 @@ function getBotTwoInput() {
     const botTwoPTag = document.getElementById('bot-two-turn')
     botTwoPTag.innerText = 'Lillys turn';
 
-    const randomNumberbotTwo = dealtCard;
-    //Math.floor(Math.random() * 20 + 1)
+    const randomNumberbotTwo = Math.floor(Math.random() * 20 + 1);
 
     console.log('bot-two', randomNumberbotTwo)
 
