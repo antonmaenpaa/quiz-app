@@ -3,17 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/stats.css" />
     <link rel="stylesheet" href="./css/reusable.css" />
     <link rel="stylesheet" href="./css/game.css" />
     <link rel="stylesheet" href="./css/tablet.css">
     <link rel="stylesheet" href="./css/mobile.css">
     <script defer src="./javascript/game.js"></script>
-    <title>Game</title>
   </head>
-
   <body class="responsive-layout-game">
     <main class="game-bg flex flex-2">
       <a class="back-arrow" href="index.html">
@@ -26,8 +23,6 @@
           <div class="white-container flex flex-1">
             <div class="candy-container flex">
               <img id="bot-one-img" class="hide flex flex-1" src="./assets/candy-score.svg" alt="score"/>
-              <!-- <img src="./assets/candy-score-empty.svg" alt="score">
-                        <img src="./assets/candy-score-empty.svg" alt="score"> -->
             </div>
             <p id="bot-one-turn" class="flex flex-1 center"></p>
           </div>
@@ -38,8 +33,6 @@
           <div class="white-container flex flex-1">
             <div class="candy-container flex">
               <img id="bot-two-img" class="hide flex flex-1" src="./assets/candy-score.svg" alt="score"/>
-              <!-- <img src="./assets/candy-score.svg" alt="score">
-                        <img src="./assets/candy-score-empty.svg" alt="score"> -->
             </div>
             <p id="bot-two-turn" class="flex flex-1 center"></p>
           </div>
@@ -50,8 +43,6 @@
           <div class="white-container flex flex-1">
             <div class="candy-container flex">
               <img id="user-img" class="hide flex flex-1" src="./assets/candy-score.svg" alt="score"/>
-              <!-- <img src="./assets/candy-score-empty.svg" alt="score">
-                      <img src="./assets/candy-score-empty.svg" alt="score"> -->
             </div>
             <!-- Input field -->
             <div class="flex flex-1 column ycenter space-around">
@@ -70,15 +61,13 @@
         <!-- Dealer -->
         <img id="dealer" class="dealer-image" src="./assets/dealer.svg" alt="Dealer" />
         <!-- Dealer feedback -->
-
         <div class="dealer-feedback flex ycenter column">
           <p id="higher-lower">Dealer</p>
           <div class="timer flex center">
             <p id="count-down"></p>
           </div>
-
         </div>
-        <!-- Knappar -->
+        <!-- Buttons -->
         <div class="game-buttons-container flex ycenter column">
           <button id="start-button" class="game-menu-button">Start</button>
           <button id="playAgain-button" class="game-menu-button">Play Again</button>
