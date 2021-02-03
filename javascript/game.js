@@ -121,6 +121,32 @@ function generateRandomFirstTurn() {
     }
 }
 
+// Update images based on win/loss
+function updateUserProfileWinImage() {
+    let userProfileImg = document.getElementById('user-profile-img');
+    userProfileImg.src = './assets/player-win.svg';
+}
+function updateBot1ProfileWinImage() {
+    let bot1ProfileImg = document.getElementById('bot1-profile-img');
+    bot1ProfileImg.src = './assets/bot1-win.svg';
+}
+function updateBot2ProfileWinImage() {
+    let bot2ProfileImg = document.getElementById('bot2-profile-img');
+    bot2ProfileImg.src = './assets/bot2-win.svg';
+}
+function updateUserProfileLoseImage() {
+    let userProfileImg = document.getElementById('user-profile-img');
+    userProfileImg.src = './assets/player-lose.svg';
+}
+function updateBot1ProfileLoseImage() {
+    let bot1ProfileImg = document.getElementById('bot1-profile-img');
+    bot1ProfileImg.src = './assets/bot1-lose.svg';
+}
+function updateBot2ProfileLoseImage() {
+    let bot2ProfileImg = document.getElementById('bot2-profile-img');
+    bot2ProfileImg.src = './assets/bot2-lose.svg';
+}
+
 // the length of woshTurn array = 2
 let turn = Math.floor(whosTurn.length);
 
@@ -159,7 +185,8 @@ function nextTurn(){
 // Logic for bot one, compare with dealers turn number
 function getBotOneInput() {
     let bot1GuessAlt = ['One', 'Two', 'Three', 'Four', 'Five'];
-    let randomizeBot1Guess = Math.floor(Math.random() * bot1GuessAlt.length);
+    let randomizeBot1Guess = dealtCard;
+    //Math.floor(Math.random() * bot1GuessAlt.length);
     let randomNumberbotOne = randomizeBot1Guess;
     // Check which guessing index Bot1 gets
     if (randomizeBot1Guess === 0) {
@@ -204,6 +231,9 @@ function getBotOneInput() {
             botOnePTag.innerText = 'My guess is: ' + randomNumberbotOne;
             setTimeout(() => {
                 dealerSpeak.innerText = 'Frank Wins!'
+                updateBot1ProfileWinImage();
+                updateUserProfileLoseImage();
+                updateBot2ProfileLoseImage();
                 const candy = document.getElementById('bot-one-img');
                 candy.classList.remove('hide');
                 setTimeout(() => {
@@ -247,7 +277,8 @@ function getBotOneInput() {
 // Logic for bot two, compare with dealers turn number
 function getBotTwoInput() {
     let bot2GuessAlt = ['One', 'Two', 'Three', 'Four', 'Five'];
-    let randomizeBot2Guess = Math.floor(Math.random() * bot2GuessAlt.length);
+    let randomizeBot2Guess = dealtCard;
+    // Math.floor(Math.random() * bot2GuessAlt.length);
     console.log('Bot 2 guesses array:',randomizeBot2Guess);
     let randomNumberbotTwo = randomizeBot2Guess;
     // Check which guessing index Bot2 gets
@@ -294,6 +325,9 @@ function getBotTwoInput() {
             botTwoPTag.innerText = 'My guess is: ' + randomNumberbotTwo;
             setTimeout(() => {
                 dealerSpeak.innerText = 'Lilly Wins!';
+                updateBot2ProfileWinImage();
+                updateUserProfileLoseImage();
+                updateBot1ProfileLoseImage();
                 const candyBotTwo = document.getElementById('bot-two-img');
                 candyBotTwo.classList.remove('hide');
                 setTimeout(() => {
@@ -382,6 +416,9 @@ function checkGuess(playerName, userGuess, userTurn) {
         dealerSpeak.innerText = `${playerName} Wins!`
         let candyUser = document.getElementById('user-img');
         candyUser.classList.remove('hide');
+        updateUserProfileWinImage();
+        updateBot1ProfileLoseImage();
+        updateBot2ProfileLoseImage();
         setUserWinsToLS();
         setBot1LossesToLS();
         setBot2LossesToLS();
