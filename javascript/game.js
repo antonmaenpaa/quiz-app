@@ -146,6 +146,10 @@ function updateBot2ProfileLoseImage() {
     let bot2ProfileImg = document.getElementById('bot2-profile-img');
     bot2ProfileImg.src = './assets/bot2-lose.svg';
 }
+function updateDealerProfileImage() {
+    let dealerProfileImg = document.getElementById('dealer');
+    dealerProfileImg.src = './assets/dealer-win.svg';
+}
 
 // the length of woshTurn array = 2
 let turn = Math.floor(whosTurn.length);
@@ -185,8 +189,7 @@ function nextTurn(){
 // Logic for bot one, compare with dealers turn number
 function getBotOneInput() {
     let bot1GuessAlt = ['One', 'Two', 'Three', 'Four', 'Five'];
-    let randomizeBot1Guess = dealtCard;
-    //Math.floor(Math.random() * bot1GuessAlt.length);
+    let randomizeBot1Guess = Math.floor(Math.random() * bot1GuessAlt.length);
     let randomNumberbotOne = randomizeBot1Guess;
     // Check which guessing index Bot1 gets
     if (randomizeBot1Guess === 0) {
@@ -234,6 +237,7 @@ function getBotOneInput() {
                 updateBot1ProfileWinImage();
                 updateUserProfileLoseImage();
                 updateBot2ProfileLoseImage();
+                updateDealerProfileImage()
                 const candy = document.getElementById('bot-one-img');
                 candy.classList.remove('hide');
                 setTimeout(() => {
@@ -277,8 +281,7 @@ function getBotOneInput() {
 // Logic for bot two, compare with dealers turn number
 function getBotTwoInput() {
     let bot2GuessAlt = ['One', 'Two', 'Three', 'Four', 'Five'];
-    let randomizeBot2Guess = dealtCard;
-    // Math.floor(Math.random() * bot2GuessAlt.length);
+    let randomizeBot2Guess = Math.floor(Math.random() * bot2GuessAlt.length);
     console.log('Bot 2 guesses array:',randomizeBot2Guess);
     let randomNumberbotTwo = randomizeBot2Guess;
     // Check which guessing index Bot2 gets
@@ -328,6 +331,7 @@ function getBotTwoInput() {
                 updateBot2ProfileWinImage();
                 updateUserProfileLoseImage();
                 updateBot1ProfileLoseImage();
+                updateDealerProfileImage()
                 const candyBotTwo = document.getElementById('bot-two-img');
                 candyBotTwo.classList.remove('hide');
                 setTimeout(() => {
@@ -419,6 +423,7 @@ function checkGuess(playerName, userGuess, userTurn) {
         updateUserProfileWinImage();
         updateBot1ProfileLoseImage();
         updateBot2ProfileLoseImage();
+        updateDealerProfileImage();
         setUserWinsToLS();
         setBot1LossesToLS();
         setBot2LossesToLS();
