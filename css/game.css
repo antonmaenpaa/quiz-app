@@ -1,6 +1,6 @@
 /* GAME */
 .game-bg {
-    background-image: url(/assets/mainmenu-bg.jpg);
+    background-image: url(../assets/mainmenu-bg.jpg);
     object-fit: cover;
     background-repeat: no-repeat;
     height: 100vh;

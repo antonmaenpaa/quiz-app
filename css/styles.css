@@ -84,7 +84,7 @@
 
 /* Background image */
 .main-menu-bg {
-    background-image: url(/assets/mainmenu-bg.jpg);
+    background-image: url(../assets/mainmenu-bg.jpg);
     height: 100vh;
     background-size: cover;
     background-position: center;
