@@ -16,5 +16,5 @@ The creators of this application is Oscar Andersson, Petter Fogel, Anton Mäenp�
 * The website is responsive
 * The appearance is uniformly troughout the website
 
-Link till appen[här](https://antonmaenpaa.github.io/quiz-app)
+Link till appen[här](https://antonmaenpaa.github.io/quiz-app/login.html)
 
